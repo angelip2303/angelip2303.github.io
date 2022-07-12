@@ -1,0 +1,10 @@
+.scroll-down {
+  position: absolute;
+  bottom: 2em;
+  transform: rotate(-45deg);
+  display: block;
+  width: 0.8em;
+  height: 0.8em;
+  border: 2px solid #f8f8f2;
+  border-width: 0 0 2px 2px;
+}

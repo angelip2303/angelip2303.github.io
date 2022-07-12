@@ -1,0 +1,52 @@
+header {
+  position: sticky;
+  top: 0;
+  background: #f8f8f2;
+  min-height: 9vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0.6em;
+  color: #282a36;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+label {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+    flex-grow: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  input[type="checkbox"]:checked + nav {
+    display: block;
+  }
+}

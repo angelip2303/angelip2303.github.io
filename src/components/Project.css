@@ -1,0 +1,26 @@
+.project {
+  color: #f8f8f2;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    var(--image);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1em;
+  margin: 1em 0;
+  list-style: none;
+}
+
+.project-items {
+  display: flex;
+  direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-item {
+  padding: 0.5em;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+}
