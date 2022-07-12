@@ -10,7 +10,7 @@ interface ProjectProps {
 
 export default function Project(props: ProjectProps): JSX.Element {
   const style = {
-    "--image": `url(${process.env.PUBLIC_URL + props.project.image})`,
+    "--image": `url(${props.project.image})`,
   } as React.CSSProperties;
 
   return (
