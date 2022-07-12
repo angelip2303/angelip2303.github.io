@@ -10,7 +10,7 @@ interface ProjectProps {
 
 export default function Project(props: ProjectProps): JSX.Element {
   const style = {
-    "--image": `url(${window.location.origin + props.project.image})`,
+    "--image": `url(${window.location.origin + "/" + props.project.image})`,
   } as React.CSSProperties;
 
   return (

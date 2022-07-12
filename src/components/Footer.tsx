@@ -7,7 +7,7 @@ export default function Footer(): JSX.Element {
     <footer>
       <p>
         Made with{" "}
-        <a href="">
+        <a href="https://github.com/angelip2303/angelip2303.github.io">
           <BsHeartFill />
         </a>{" "}
         in Asturias
