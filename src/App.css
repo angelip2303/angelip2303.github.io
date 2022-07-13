@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -11,11 +12,11 @@
 
 h1 {
   font-family: "Pacifico", cursive;
-  font-size: 1.75em;
+  font-size: 1.25em;
 }
 
 h2 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 a,
