@@ -26,14 +26,23 @@ export default function Header(): JSX.Element {
         >
           <FaTimes />
         </div>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onClick={toggleMenu}>
+          About
+        </a>
+        <a href="#projects" onClick={toggleMenu}>
+          Projects
+        </a>
+        <a href="#contact" onClick={toggleMenu}>
+          Contact
+        </a>
         <div className="social-media">
-          <a href="https://www.linkedin.com/in/%C3%A1ngel-iglesias-pr%C3%A9stamo-007b561b7/">
+          <a
+            href="https://www.linkedin.com/in/%C3%A1ngel-iglesias-pr%C3%A9stamo-007b561b7/"
+            onClick={toggleMenu}
+          >
             <FaLinkedin />
           </a>
-          <a href="https://github.com/angelip2303">
+          <a href="https://github.com/angelip2303" onClick={toggleMenu}>
             <FaGithub />
           </a>
         </div>
