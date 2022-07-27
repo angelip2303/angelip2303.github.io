@@ -20,7 +20,8 @@ h2 {
 }
 
 a,
-.greetings-text {
+.greetings-text,
+span {
   color: #bd93f9;
 }
 

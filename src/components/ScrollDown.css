@@ -1,4 +1,6 @@
 .scroll-down {
+  background: none;
+  cursor: pointer;
   position: absolute;
   bottom: 2em;
   transform: rotate(-45deg);

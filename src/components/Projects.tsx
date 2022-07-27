@@ -42,7 +42,9 @@ const projects: ProjectType[] = [
 export default function Projects(): JSX.Element {
   return (
     <section id="projects">
-      <h2>The projects I'm the most proud of</h2>
+      <h2>
+        The projects I'm the most <span>proud</span> of
+      </h2>
       <ol className="projects">
         {projects.map((project) => (
           <Project project={project} key={project.name} />
