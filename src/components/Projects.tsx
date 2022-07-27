@@ -37,6 +37,19 @@ const projects: ProjectType[] = [
       },
     ],
   },
+  {
+    name: "angelip2303.github.io",
+    description:
+      "My personal portfolio website created using React.js and some CSS animations that I like!",
+    image: "images/site.png",
+    technologies: ["React.js", "CSS"],
+    externalLinks: [
+      {
+        url: "https://github.com/angelip2303/angelip2303.github.io",
+        icon: FiGithub,
+      },
+    ],
+  },
 ];
 
 export default function Projects(): JSX.Element {
