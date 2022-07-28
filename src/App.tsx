@@ -11,7 +11,6 @@ import Contact from "./components/Contact";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import particlesConfig from "./config/particlesConfig";
 
 export default function App(): JSX.Element {
   const particlesInit = async (main: any) => {
@@ -40,13 +39,13 @@ export default function App(): JSX.Element {
               },
             },
             color: {
-              value: "#ffffff",
+              value: "#f8f8f2",
             },
             shape: {
               type: "circle",
             },
             opacity: {
-              value: 1,
+              value: 0.25,
               random: true,
               anim: {
                 enable: true,
