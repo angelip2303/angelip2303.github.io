@@ -5,13 +5,8 @@ import { GiOctopus } from "react-icons/gi";
 export default function About(): JSX.Element {
   return (
     <section id="about">
-      <h2 style={{ display: "flex" }}>
-        <div>
-          Let me <span>introduce</span> myself
-        </div>
-        <div className="octopus">
-          <GiOctopus />
-        </div>
+      <h2>
+        <GiOctopus className="octopus" /> Let me <span>introduce</span> myself
       </h2>
       <p>
         <span
