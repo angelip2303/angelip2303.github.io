@@ -9,6 +9,7 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 const projects: ProjectType[] = [
   {
     name: "Decentralized Delivery",
+    featured: "Featured Project",
     description:
       "We are creating an app for you to order the products you want - as in any other site - with privacy in mind.",
     image: "images/dede.png",
@@ -26,6 +27,7 @@ const projects: ProjectType[] = [
   },
   {
     name: "C--",
+    featured: "Featured Project",
     description:
       "My own version of the C-- programming language. A simpler version of C written in the labs of the DLP course at UNIOVI.",
     image: "images/dlp.png",
@@ -39,6 +41,7 @@ const projects: ProjectType[] = [
   },
   {
     name: "angelip2303.github.io",
+    featured: "Featured Project",
     description:
       "My personal portfolio website created using React.js and some CSS animations that I like!",
     image: "images/site.png",
@@ -47,6 +50,24 @@ const projects: ProjectType[] = [
       {
         url: "https://github.com/angelip2303/angelip2303.github.io",
         icon: FiGithub,
+      },
+      {
+        url: "https://angelip2303.github.io/",
+        icon: FiExternalLink,
+      },
+    ],
+  },
+  {
+    name: "Solid World July 2022",
+    featured: "Featured Event",
+    description:
+      "Event were I introduced the Decentralized Delivery project to the Solid community.",
+    image: "images/solid.png",
+    technologies: ["English", "Communication"],
+    externalLinks: [
+      {
+        url: "https://vimeo.com/731471028",
+        icon: FiExternalLink,
       },
     ],
   },

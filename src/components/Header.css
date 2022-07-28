@@ -2,13 +2,14 @@ header {
   position: sticky;
   top: 0;
   background: #f8f8f2;
-  min-height: 10vh;
+  min-height: 8vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 9999999;
 }
 
 nav {

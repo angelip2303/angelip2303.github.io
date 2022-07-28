@@ -15,14 +15,20 @@ export default function Project(props: ProjectProps): JSX.Element {
 
   return (
     <li className="project" style={style} key={props.project.name}>
-      <h4>Featured Project</h4>
+      <h4>{props.project.featured}</h4>
       <h2>{props.project.name}</h2>
       <p>{props.project.description}</p>
       <ul className="project-items">
-        {props.project.technologies.map((technology) => (
-          <li className="project-item" key={technology}>
-            {technology}
-          </li>
+        <li className="project-item" key={props.project.technologies[0]}>
+          {props.project.technologies[0]}
+        </li>
+        {props.project.technologies.slice(1).map((technology) => (
+          <React.Fragment>
+            <span>·</span>
+            <li className="project-item" key={technology}>
+              {technology}
+            </li>
+          </React.Fragment>
         ))}
       </ul>
       <ul className="project-items">
