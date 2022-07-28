@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap");
@@ -11,7 +11,8 @@
 }
 
 h1 {
-  font-family: "Pacifico", cursive;
+  color: #282a36;
+  font-family: "Abril Fatface", cursive;
   font-size: 1.25em;
 }
 
@@ -49,4 +50,13 @@ section:nth-child(odd) {
 section:nth-child(even) {
   color: #282a36;
   background: #f8f8f2;
+}
+
+.icon {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.icon:hover {
+  transform: scale(1.2);
 }

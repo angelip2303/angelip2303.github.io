@@ -14,7 +14,7 @@ export default function Header(): JSX.Element {
 
   return (
     <header>
-      <h1>aip</h1>
+      <h1>Ángel.</h1>
       <div className="toggle-menu" hidden={!isMenuToggled} onClick={toggleMenu}>
         <FaBars />
       </div>
@@ -26,23 +26,28 @@ export default function Header(): JSX.Element {
         >
           <FaTimes />
         </div>
-        <a href="#about" onClick={toggleMenu}>
+        <a href="#about" className="menu-element" onClick={toggleMenu}>
           About
         </a>
-        <a href="#projects" onClick={toggleMenu}>
+        <a href="#projects" className="menu-element" onClick={toggleMenu}>
           Projects
         </a>
-        <a href="#contact" onClick={toggleMenu}>
+        <a href="#contact" className="menu-element" onClick={toggleMenu}>
           Contact
         </a>
         <div className="social-media">
           <a
             href="https://www.linkedin.com/in/%C3%A1ngel-iglesias-pr%C3%A9stamo-007b561b7/"
+            className="icon"
             onClick={toggleMenu}
           >
             <FaLinkedin />
           </a>
-          <a href="https://github.com/angelip2303" onClick={toggleMenu}>
+          <a
+            href="https://github.com/angelip2303"
+            className="icon"
+            onClick={toggleMenu}
+          >
             <FaGithub />
           </a>
         </div>

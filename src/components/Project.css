@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 55vh;
   list-style: none;
   box-shadow: 0px 0px 0.8em 0.1em rgba(0, 0, 0, 0.5);
 }

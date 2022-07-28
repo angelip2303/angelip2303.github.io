@@ -2,7 +2,7 @@ header {
   position: sticky;
   top: 0;
   background: #f8f8f2;
-  min-height: 8vh;
+  min-height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -24,12 +24,8 @@ nav a {
   color: #282a36;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-.social-media a:hover {
-  color: #bd93f9;
+.menu-element:hover {
+  border-bottom: 0.2em #bd93f9 solid;
 }
 
 .toggle-menu {
@@ -69,9 +65,5 @@ nav a:hover {
     flex-direction: column;
     background-color: #f8f8f2;
     transition: all 0.5s ease;
-  }
-
-  nav a {
-    display: block;
   }
 }
