@@ -23,11 +23,9 @@ export default function Project(props: ProjectProps): JSX.Element {
           {props.project.technologies[0]}
         </li>
         {props.project.technologies.slice(1).map((technology) => (
-          <React.Fragment>
+          <React.Fragment key={technology}>
             <span>·</span>
-            <li className="project-item" key={technology}>
-              {technology}
-            </li>
+            <li className="project-item">{technology}</li>
           </React.Fragment>
         ))}
       </ul>
