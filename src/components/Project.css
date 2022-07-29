@@ -2,9 +2,8 @@
   color: #f8f8f2;
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     var(--image);
-  background-attachment: fixed;
+  z-index: 0;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   padding: 1em;
   margin: 0.5em 0;
