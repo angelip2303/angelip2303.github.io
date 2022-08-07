@@ -77,7 +77,7 @@ export default function Projects(): JSX.Element {
   return (
     <section id="projects">
       <h2>
-        The projects I'm the most <span>proud</span> of
+        The projects I&apos;m the most <span>proud</span> of
       </h2>
       <ol className="projects">
         {projects.map((project) => (

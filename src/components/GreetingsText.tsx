@@ -6,7 +6,7 @@ const greetings = ["hola", "hello", "salut"];
 
 export default function GreetingsText(): JSX.Element {
   React.useState(() => {
-    let textElements = document.getElementsByClassName("greetings-text");
+    const textElements = document.getElementsByClassName("greetings-text");
     let index = 0;
 
     function changeGreetingsText() {

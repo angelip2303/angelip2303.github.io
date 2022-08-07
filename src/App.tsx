@@ -13,10 +13,6 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
 export default function App(): JSX.Element {
-  const particlesInit = async (main: any) => {
-    await loadFull(main);
-  };
-
   return (
     <React.Fragment>
       <Hero />
@@ -28,7 +24,7 @@ export default function App(): JSX.Element {
 
       <Particles
         id="tsparticles"
-        init={particlesInit}
+        init={loadFull}
         params={{
           particles: {
             number: {

@@ -5,7 +5,7 @@ import "./ScrollDown.css";
 export default function ScrollDown(): JSX.Element {
   const handleClick = () => {
     // We have to make sure that the about section is being displayed :D
-    let about = $("#about").offset();
+    const about = $("#about").offset();
     if (about) $("html, body").animate({ scrollTop: about.top }, "slow");
   };
 
