@@ -22,8 +22,20 @@ const config: Configuration = {
         use: ["babel-loader"],
       },
       {
-        test: /\\.css$/,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.webp$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/images/",
+        },
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
       },
     ],
   },
@@ -42,6 +54,7 @@ const config: Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
   ],
 };
 

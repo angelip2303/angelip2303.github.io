@@ -29,14 +29,27 @@ const config: Configuration = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.webp$/,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/images/",
+        },
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
     ],
   },
   resolve: {
     modules: ["src", "node_modules"],
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".webp"],
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: "./src/assets/images/favicon.ico",
       template: "public/index.html",
     }),
     new HotModuleReplacementPlugin(),

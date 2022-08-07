@@ -6,13 +6,18 @@ import Project from "./Project";
 
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
+import DedeImg from "../assets/images/dede.webp";
+import CProgrammingLanguage from "../assets/images/dlp.webp";
+import Portfolio from "../assets/images/site.webp";
+import SolidWorld from "../assets/images/solid.webp";
+
 const projects: ProjectType[] = [
   {
     name: "Decentralized Delivery",
     featured: "Featured Project",
     description:
       "We are creating an app for you to order the products you want - as in any other site - with privacy in mind.",
-    image: "images/dede.webp",
+    image: DedeImg,
     technologies: ["React.js", "Node.js"],
     externalLinks: [
       {
@@ -30,7 +35,7 @@ const projects: ProjectType[] = [
     featured: "Featured Project",
     description:
       "My own version of the C-- programming language. A simpler version of C written in the labs of the DLP course at UNIOVI.",
-    image: "images/dlp.webp",
+    image: CProgrammingLanguage,
     technologies: ["Java", "ANTLR", "Programming Language Design"],
     externalLinks: [
       {
@@ -44,7 +49,7 @@ const projects: ProjectType[] = [
     featured: "Featured Project",
     description:
       "My personal portfolio website created using React.js and some CSS animations that I like!",
-    image: "images/site.webp",
+    image: Portfolio,
     technologies: ["React.js", "CSS"],
     externalLinks: [
       {
@@ -62,7 +67,7 @@ const projects: ProjectType[] = [
     featured: "Featured Event",
     description:
       "Event were I introduced the Decentralized Delivery project to the Solid community.",
-    image: "images/solid.webp",
+    image: SolidWorld,
     technologies: ["English", "Communication"],
     externalLinks: [
       {
