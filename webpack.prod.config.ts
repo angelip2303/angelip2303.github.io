@@ -9,6 +9,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 const config: Configuration = {
   mode: "production",
   entry: "./src/index.tsx",
+  cache: true,
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[contenthash].js",

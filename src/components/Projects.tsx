@@ -10,6 +10,7 @@ import DedeImg from "../assets/images/dede.webp";
 import CProgrammingLanguage from "../assets/images/dlp.webp";
 import Portfolio from "../assets/images/site.webp";
 import SolidWorld from "../assets/images/solid.webp";
+import TinyPaint from "../assets/images/MiniPaint.webp";
 
 const projects: ProjectType[] = [
   {
@@ -50,7 +51,7 @@ const projects: ProjectType[] = [
     description:
       "My personal portfolio website created using React.js and some CSS animations that I like!",
     image: Portfolio,
-    technologies: ["React.js", "CSS"],
+    technologies: ["React.js", "CSS", "Webpack"],
     externalLinks: [
       {
         url: "https://github.com/angelip2303/angelip2303.github.io",
@@ -72,6 +73,20 @@ const projects: ProjectType[] = [
     externalLinks: [
       {
         url: "https://vimeo.com/731471028",
+        icon: FiExternalLink,
+      },
+    ],
+  },
+  {
+    name: "MiniPaint",
+    featured: "Happy Accident",
+    description:
+      "Tiny whiteboard where user can draw and save what he is being painted in the canvas.",
+    image: TinyPaint,
+    technologies: ["p5.js", "Creative Coding"],
+    externalLinks: [
+      {
+        url: "https://editor.p5js.org/angelip2303/sketches/wr9xz7fNX",
         icon: FiExternalLink,
       },
     ],
