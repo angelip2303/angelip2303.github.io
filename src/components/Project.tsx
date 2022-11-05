@@ -11,10 +11,16 @@ interface ProjectProps {
 export default function Project(props: ProjectProps): JSX.Element {
   const style = {
     "--image": `url(${props.project.image})`,
+    cursor: "pointer",
   } as React.CSSProperties;
 
   return (
-    <li className="project" style={style} key={props.project.name}>
+    <li
+      className="project"
+      style={style}
+      key={props.project.name}
+      onClick={() => window.open(props.project.url, "_blank")}
+    >
       <h4>{props.project.featured}</h4>
       <h2>{props.project.name}</h2>
       <p>{props.project.description}</p>
@@ -27,15 +33,6 @@ export default function Project(props: ProjectProps): JSX.Element {
             <span>·</span>
             <li className="project-item">{technology}</li>
           </React.Fragment>
-        ))}
-      </ul>
-      <ul className="project-items">
-        {props.project.externalLinks.map((externalLink) => (
-          <li className="project-item" key={externalLink.url}>
-            <a href={externalLink.url}>
-              <externalLink.icon />
-            </a>
-          </li>
         ))}
       </ul>
     </li>

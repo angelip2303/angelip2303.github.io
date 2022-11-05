@@ -46,6 +46,7 @@ const config: Configuration = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      favicon: "./src/assets/images/favicon.ico",
       template: "public/index.html",
     }),
     new ForkTsCheckerWebpackPlugin({
