@@ -29,7 +29,7 @@ const webpackConfig: Configuration = {
       },
       // --*-- IMAGES --*--
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
       },
     ],
