@@ -3,7 +3,7 @@ import "./Hero.css";
 export default function Hero(): JSX.Element {
   return (
     <section className="hero">
-      <h1>
+      <h1 className="title">
         Ángel Iglesias Préstamo
         <img
           src={require("../assets/images/octopus.svg")}

@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-h1 {
+.title {
   font-size: 3.5em;
   padding-bottom: 0.5em;
   display: flex;

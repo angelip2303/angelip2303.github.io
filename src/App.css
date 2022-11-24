@@ -35,7 +35,11 @@ body {
 }
 
 #content {
-  padding: 2em;
+  padding: 0em 2em 2em 2em;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 a,
