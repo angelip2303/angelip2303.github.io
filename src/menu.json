@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "title": "🏡 Home",
+      "url": "/"
+    },
+    {
+      "title": "💻 Projects",
+      "url": "/projects"
+    },
+    {
+      "title": "🎤 Events",
+      "url": "/events"
+    }
+  ]
+}

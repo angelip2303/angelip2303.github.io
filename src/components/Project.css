@@ -1,7 +1,5 @@
 .project {
-  color: #f8f8f2;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-    var(--image);
+  background: linear-gradient(rgba(var(--background-color), 0.85)), var(--image); /* make this work :D also with color theme */
   z-index: 0;
   background-position: center;
   background-size: cover;

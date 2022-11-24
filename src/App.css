@@ -1,62 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap");
+
+:root,
+:root.light {
+  --foreground-color: 46, 52, 64;
+  --background-color: 236, 239, 244;
+  --accent-color: 180, 142, 173;
+  --header-height: 10vh;
+  --footer-height: 10vh;
+}
+
+:root.dark {
+  --foreground-color: 236, 239, 244;
+  --background-color: 46, 52, 64;
+  --accent-color: 180, 142, 173;
+  --text-color: #eceff4;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "JetBrains Mono", monospace;
 }
 
-h1 {
-  color: #282a36;
-  font-family: "Abril Fatface", cursive;
-  font-size: 1.25em;
-}
-
-h2 {
-  font-family: "Ubuntu Mono", monospace;
+#root {
+  color: rgb(var(--foreground-color));
+  background-color: rgb(var(--background-color)); /* TODO: good practice? */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Ubuntu Mono", monospace; /* TODO: use only 2 fonts at most */
 }
 
 a,
-.greetings-text,
 span {
-  color: #bd93f9;
-}
-
-p {
-  padding: 1em 0;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 70vh;
-  padding: 4em;
-  text-align: center;
-  box-shadow: inset 0em -0.5em 0.75em -0.1em rgba(0, 0, 0, 0.25),
-    inset 0em 0.5em 0.75em -0.1em rgba(0, 0, 0, 0.25);
-}
-
-section:nth-child(odd) {
-  color: #f8f8f2;
-  background: #282a36;
-}
-
-section:nth-child(even) {
-  color: #282a36;
-  background: #f8f8f2;
-}
-
-.icon {
-  display: inline-flex;
-  vertical-align: middle;
-}
-
-.icon:hover {
-  transform: scale(1.2);
+  color: rgb(var(--accent-color));
 }

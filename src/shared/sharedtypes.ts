@@ -6,3 +6,8 @@ export interface ProjectType {
   technologies: string[];
   url: string;
 }
+
+export interface MenuItemType {
+  title: string;
+  url: string;
+}

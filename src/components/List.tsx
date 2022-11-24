@@ -6,8 +6,6 @@ import Project from "./Project";
 
 import projects from "../projects.json";
 
-//import { FiGithub, FiExternalLink } from "react-icons/fi";
-
 export default function Projects(): JSX.Element {
   return (
     <section id="projects">

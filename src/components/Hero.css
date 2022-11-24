@@ -1,8 +1,16 @@
 .hero {
-  height: 92vh;
+  flex: 1;
+  padding: 0 10%; /* less padding for lower res */
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: #282a36;
-  position: relative;
+}
+
+h1 {
+  font-size: 3.5em;
+  padding-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
 }

@@ -1,0 +1,25 @@
+.toggle-menu {
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .toggle-menu {
+    visibility: visible;
+    cursor: pointer;
+    margin-right: 1em;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    font-size: 1.5em;
+    z-index: 9999999;
+  }
+}

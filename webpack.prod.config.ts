@@ -1,63 +1,17 @@
 import path from "path";
+import { merge } from "webpack-merge";
+import webpackConfig from "./webpack.config";
 import { Configuration } from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
-import ESLintPlugin from "eslint-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
-const config: Configuration = {
+const config: Configuration = merge(webpackConfig, {
   mode: "production",
-  entry: "./src/index.tsx",
-  cache: true,
+  devtool: "source-map",
   output: {
-    path: path.resolve(__dirname, "build"),
-    filename: "[name].[contenthash].js",
-    publicPath: "",
+    path: path.join(__dirname, "dist"),
+    filename: "[name].[chunkhash].ts",
   },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"],
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-      {
-        test: /\.webp$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          outputPath: "assets/images/",
-        },
-      },
-      {
-        test: /\.html$/,
-        use: ["html-loader"],
-      },
-    ],
-  },
-  resolve: {
-    modules: ["src", "node_modules"],
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      favicon: "./src/assets/images/favicon.ico",
-      template: "public/index.html",
-    }),
-    new ForkTsCheckerWebpackPlugin({
-      async: false,
-    }),
-    new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"],
-    }),
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
-  ],
-};
+  plugins: [new CleanWebpackPlugin()],
+});
 
 export default config;
