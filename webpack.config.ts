@@ -29,12 +29,8 @@ const webpackConfig: Configuration = {
       },
       // --*-- IMAGES --*--
       {
-        test: /\.webp$/,
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]",
-          outputPath: "assets/images/",
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: "asset/resource",
       },
     ],
   },

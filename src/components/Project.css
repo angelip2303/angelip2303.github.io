@@ -1,5 +1,5 @@
 .project {
-  background: linear-gradient(rgba(var(--background-color), 0.85)), var(--image); /* make this work :D also with color theme */
+  /* background: linear-gradient(rgba(var(--background-color), 0.85)), var(--image); /* make this work :D also with color theme */
   z-index: 0;
   background-position: center;
   background-size: cover;
@@ -9,8 +9,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 1em;
   list-style: none;
-  box-shadow: 0px 0px 0.8em 0.1em rgba(0, 0, 0, 0.5);
+  border-radius: 0.15em;
+  background-color: rgba(var(--foreground-color), 0.025);
 }
 
 .project:hover {

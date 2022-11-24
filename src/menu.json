@@ -1,15 +1,18 @@
 {
   "menu": [
     {
-      "title": "🏡 Home",
+      "emoji": "assets/images/House.svg",
+      "title": "Home",
       "url": "/"
     },
     {
-      "title": "💻 Projects",
+      "emoji": "assets/images/Rocket.svg",
+      "title": "Projects",
       "url": "/projects"
     },
     {
-      "title": "🎤 Events",
+      "emoji": "assets/images/Clock.svg",
+      "title": "Events",
       "url": "/events"
     }
   ]

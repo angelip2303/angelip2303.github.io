@@ -8,6 +8,7 @@ export interface ProjectType {
 }
 
 export interface MenuItemType {
+  emoji: string;
   title: string;
   url: string;
 }
