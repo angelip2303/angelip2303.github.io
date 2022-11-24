@@ -11,7 +11,7 @@ interface ListProps {
 
 export default function Projects(props: ListProps): JSX.Element {
   return (
-    <section>
+    <section className="listSection">
       <h2>{props.title}</h2>
       <ol className="list">
         {props.list.map((element) => (

@@ -1,3 +1,9 @@
+.listSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .list {
   display: grid;
   grid-template-columns: repeat(2, 49%);
