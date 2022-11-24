@@ -1,17 +1,17 @@
 {
   "menu": [
     {
-      "emoji": "assets/images/House.svg",
+      "emoji": "House.svg",
       "title": "Home",
       "url": "/"
     },
     {
-      "emoji": "assets/images/Rocket.svg",
+      "emoji": "Rocket.svg",
       "title": "Projects",
       "url": "/projects"
     },
     {
-      "emoji": "assets/images/Clock.svg",
+      "emoji": "Clock.svg",
       "title": "Events",
       "url": "/events"
     }

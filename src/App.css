@@ -18,14 +18,12 @@
 
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   color: rgb(var(--foreground-color));
   background-color: rgb(var(--background-color)); /* TODO: good practice? */
-
   font-family: "Ubuntu Mono", monospace; /* TODO: use only 2 fonts at most */
 }
 
@@ -36,7 +34,7 @@ body {
 }
 
 #content {
-  padding: 0 2em;
+  padding: 2em;
 }
 
 a,

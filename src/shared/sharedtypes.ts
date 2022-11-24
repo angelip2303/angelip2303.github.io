@@ -1,4 +1,4 @@
-export interface ProjectType {
+export interface ListItemType {
   name: string;
   featured: string;
   description: string;

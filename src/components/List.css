@@ -1,13 +1,12 @@
-.projects {
+.list {
   display: grid;
-  padding: 2em;
   grid-template-columns: repeat(2, 49%);
   column-gap: 1em;
   margin-top: 1em;
 }
 
 @media screen and (max-width: 600px) {
-  .projects {
+  .list {
     display: block;
   }
 }

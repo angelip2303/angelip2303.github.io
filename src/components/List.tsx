@@ -1,20 +1,21 @@
-import { ProjectType } from "../shared/sharedtypes";
+import { ListItemType } from "../shared/sharedtypes";
 
-import "./Projects.css";
+import "./List.css";
 
-import Project from "./Project";
+import ListItem from "./ListItem";
 
-import projects from "../projects.json";
+interface ListProps {
+  title: string;
+  list: ListItemType[];
+}
 
-export default function Projects(): JSX.Element {
+export default function Projects(props: ListProps): JSX.Element {
   return (
-    <section id="projects">
-      <h2>
-        The projects I&apos;m the most <span>proud</span> of
-      </h2>
-      <ol className="projects">
-        {projects.projects.map((project) => (
-          <Project project={project as ProjectType} key={project.name} />
+    <section>
+      <h2>{props.title}</h2>
+      <ol className="list">
+        {props.list.map((element) => (
+          <ListItem listItem={element as ListItemType} key={element.name} />
         ))}
       </ol>
     </section>
