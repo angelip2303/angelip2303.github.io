@@ -9,19 +9,13 @@ interface ListItemProps {
 }
 
 export default function ListItem(props: ListItemProps): JSX.Element {
-  const style = {
-    "--image": `url(${require(`../assets/images/${props.listItem.image}`)})`,
-    cursor: "pointer",
-  } as React.CSSProperties;
-
   return (
     <li
       className="project"
-      style={style}
       key={props.listItem.name}
       onClick={() => window.open(props.listItem.url, "_blank")}
     >
-      <h4>{props.listItem.featured}</h4>
+      <span className="badge">{props.listItem.featured}</span>
       <h2>{props.listItem.name}</h2>
       <p>{props.listItem.description}</p>
       <ul className="project-items">

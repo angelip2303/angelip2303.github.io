@@ -1,22 +1,24 @@
 .project {
-  background: linear-gradient(rgba(var(--background-color), 0.85)), var(--image); /* TODO: make this work ? */
   z-index: 0;
-  background-position: center;
-  background-size: cover;
-  padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   gap: 1em;
+  text-align: center;
+  border: 0.1em solid rgba(var(--foreground-color), 0.25);
+  border-radius: 0.25em;
+  cursor: pointer;
+  padding: 1em;
   list-style: none;
-  border-radius: 0.15em;
-  background-color: rgba(var(--foreground-color), 0.025);
 }
 
-.project:hover {
-  transform: scale(1.025);
+.project:last-child:nth-last-child(odd) {
+  grid-column: auto / span 2;
+}
+
+.badge {
+  color: rgb(var(--accent-color));
 }
 
 .project-items {

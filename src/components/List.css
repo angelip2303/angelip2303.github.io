@@ -6,7 +6,7 @@
 
 .list {
   display: grid;
-  grid-template-columns: repeat(2, 49%);
+  grid-template-columns: 2fr 2fr;
   gap: 1em;
 }
 
@@ -14,5 +14,6 @@
   .list {
     display: flex;
     flex-direction: column;
+    gap: 1em;
   }
 }
