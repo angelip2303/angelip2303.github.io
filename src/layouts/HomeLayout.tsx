@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 
 import Header from "../components/Header";
@@ -6,10 +5,10 @@ import Footer from "../components/Footer";
 
 export default function Layout(): JSX.Element {
   return (
-    <React.Fragment>
+    <div id="home">
       <Header />
       <Outlet />
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }

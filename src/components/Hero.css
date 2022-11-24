@@ -1,7 +1,7 @@
 .hero {
-  flex: 1;
   padding: 0 10%; /* less padding for lower res */
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
 }

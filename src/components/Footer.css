@@ -1,4 +1,5 @@
 footer {
   height: var(--footer-height);
   text-align: center;
+  padding-top: 2em;
 }

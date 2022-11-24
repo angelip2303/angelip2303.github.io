@@ -4,7 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import Home from "./pages/Home";
-import Layout from "layouts/Layout";
+import HomeLayout from "layouts/HomeLayout";
+import MainLayout from "layouts/MainLayout";
 
 const Projects = React.lazy(() => import("./pages/Projects"));
 const Events = React.lazy(() => import("./pages/Events"));
@@ -12,8 +13,10 @@ const Events = React.lazy(() => import("./pages/Events"));
 export default function App(): JSX.Element {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<HomeLayout />}>
         <Route index element={<Home />} />
+      </Route>
+      <Route path="/" element={<MainLayout />}>
         <Route
           path="projects"
           element={
