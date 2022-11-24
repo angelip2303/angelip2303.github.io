@@ -1,12 +1,12 @@
 .list {
   display: grid;
   grid-template-columns: repeat(2, 49%);
-  column-gap: 1em;
-  margin-top: 1em;
+  gap: 1em;
 }
 
 @media screen and (max-width: 600px) {
   .list {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }

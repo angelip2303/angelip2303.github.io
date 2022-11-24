@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
 :root,
 :root.light {
@@ -18,13 +18,14 @@
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   color: rgb(var(--foreground-color));
   background-color: rgb(var(--background-color)); /* TODO: good practice? */
-  font-family: "Ubuntu Mono", monospace; /* TODO: use only 2 fonts at most */
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 #home {
