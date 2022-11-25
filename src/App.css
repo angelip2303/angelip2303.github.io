@@ -1,8 +1,10 @@
 :root,
 :root.light {
-  --foreground-color: 46, 52, 64;
+  --foreground-color: 40, 42, 54;
   --background-color: 236, 239, 244;
   --accent-color: 180, 142, 173;
+  --badge-foreground: 236, 239, 244;
+  --badge-background: 40, 42, 54;
   --header-height: 10vh;
   --footer-height: 15vh;
 }
