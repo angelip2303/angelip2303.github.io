@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://angelip2303.github.io",
+  "homepage": "https://angelip2303.github.io/#",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
