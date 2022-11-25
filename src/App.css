@@ -6,7 +6,7 @@
   --background-color: 236, 239, 244;
   --accent-color: 180, 142, 173;
   --header-height: 10vh;
-  --footer-height: 10vh;
+  --footer-height: 15vh;
 }
 
 :root.dark {
