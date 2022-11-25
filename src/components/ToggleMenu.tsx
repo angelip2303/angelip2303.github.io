@@ -12,7 +12,10 @@ interface ToggleMenuProps {
 
 export default function ToggleMenu(props: ToggleMenuProps): JSX.Element {
   return (
-    <button onClick={props.toggleMenu}>
+    <button
+      onClick={props.toggleMenu}
+      title="Button for toggling the nav for mobiles"
+    >
       <IconContext.Provider value={{ className: "toggle-menu" }}>
         {props.isMenuToggled ? <FaBars /> : <FaTimes className="close-menu" />}
       </IconContext.Provider>
