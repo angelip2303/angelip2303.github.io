@@ -10,7 +10,6 @@ const config: Configuration = merge(webpackConfig, {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].[chunkhash].js",
-    publicPath: "",
     assetModuleFilename: "./src/assets/images/[name].[ext]",
   },
   plugins: [new CleanWebpackPlugin()],
