@@ -21,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "start": "webpack serve --config webpack.dev.config.ts --stats-error-details",
     "build": "webpack --config webpack.prod.config.ts"
   },
