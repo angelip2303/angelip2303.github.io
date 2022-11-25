@@ -29,16 +29,17 @@ const socialMedia: SocialMediaInterface[] = [
 
 export default function SocialMedia(): JSX.Element {
   return (
-    <li className="socials">
+    <div className="socials">
       {socialMedia.map((social) => (
-        <ul
+        <a
           className="icon"
-          onClick={() => window.open(social.url, "_blank")}
+          href={social.url}
           key={social.title}
+          title={social.title}
         >
-          <social.icon />
-        </ul>
+          <social.icon className="social" />
+        </a>
       ))}
-    </li>
+    </div>
   );
 }

@@ -5,21 +5,17 @@ import "./ToggleMenu.css";
 import { IconContext } from "react-icons";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function ToggleMenu(): JSX.Element {
-  const [isMenuToggled, setMenuToggled] = React.useState(true);
+interface ToggleMenuProps {
+  isMenuToggled: boolean;
+  toggleMenu: () => void;
+}
 
-  const toggleMenu = () => {
-    document.getElementById("menu")?.classList.toggle("active"); // TODO: works?
-    setMenuToggled((current) => !current);
-  };
-
+export default function ToggleMenu(props: ToggleMenuProps): JSX.Element {
   return (
-    <a onClick={toggleMenu}>
+    <button onClick={props.toggleMenu}>
       <IconContext.Provider value={{ className: "toggle-menu" }}>
-        {
-          isMenuToggled ? <FaBars /> : <FaTimes className="close-menu" /> // TODO: save in the db of the browser?
-        }
+        {props.isMenuToggled ? <FaBars /> : <FaTimes className="close-menu" />}
       </IconContext.Provider>
-    </a>
+    </button>
   );
 }

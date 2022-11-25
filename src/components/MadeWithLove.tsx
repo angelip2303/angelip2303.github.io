@@ -7,6 +7,7 @@ export default function Footer(): JSX.Element {
       <a
         href="https://github.com/angelip2303/angelip2303.github.io"
         className="icon"
+        title="Link to the Github repository of the site"
       >
         <BsHeartFill />
       </a>{" "}

@@ -8,6 +8,7 @@ export default function Hero(): JSX.Element {
         <img
           src={require("../assets/images/octopus.svg")}
           className="octopus"
+          alt="Emoji of an octopus bouncing!"
         />
       </h1>
 

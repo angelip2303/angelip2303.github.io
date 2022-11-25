@@ -12,7 +12,6 @@ interface ThemeProviderProps {
 const ThemeContext = createContext<ThemeContextInterface | null>(null);
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  // TODO: refactor this
   const localStorageTheme = localStorage.getItem("theme");
   const initialTheme: string = localStorageTheme ? localStorageTheme : "light";
   const [isDarkMode, setDarkMode] = useState(initialTheme === "dark");

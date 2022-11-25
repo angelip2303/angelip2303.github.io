@@ -9,10 +9,10 @@ import { useTheme } from "context/ThemeContext";
 export default function ThemeSelector(): JSX.Element {
   const theme = useTheme();
   return (
-    <a onClick={theme?.toggleTheme}>
+    <button onClick={theme?.toggleTheme}>
       <IconContext.Provider value={{ className: "themeSelector" }}>
         {theme?.isDarkMode ? <MdOutlineDarkMode /> : <MdLightMode />}
       </IconContext.Provider>
-    </a>
+    </button>
   );
 }
