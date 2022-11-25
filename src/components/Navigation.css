@@ -5,7 +5,7 @@ nav {
   justify-content: center;
 }
 
-nav a {
+.menu-element {
   font-size: 1.25em;
   text-decoration: none;
   padding: 0.6em;

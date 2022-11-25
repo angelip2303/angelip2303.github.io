@@ -8,7 +8,7 @@ export default function Navigation(): JSX.Element {
   return (
     <nav id="menu">
       {menu.menu.map((menuItem) => (
-        <Link to={menuItem.url} key={menuItem.title}>
+        <Link to={menuItem.url} key={menuItem.title} className="menu-element">
           <img src={require(`../assets/images/${menuItem.emoji}`)} />
           {menuItem.title}{" "}
         </Link>
