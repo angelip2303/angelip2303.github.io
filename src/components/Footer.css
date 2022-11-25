@@ -3,6 +3,6 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1.5em;
-  padding: 2em 0;
+  gap: 1.25em;
+  padding: 1em 0;
 }

@@ -1,7 +1,7 @@
 import "./SocialMedia.css";
 
 import { IconType } from "react-icons";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { TfiGithub, TfiLinkedin, TfiEmail } from "react-icons/tfi";
 
 interface SocialMediaInterface {
   title: string;
@@ -12,13 +12,18 @@ interface SocialMediaInterface {
 const socialMedia: SocialMediaInterface[] = [
   {
     title: "Github",
-    icon: BsGithub,
+    icon: TfiGithub,
     url: "https://github.com/angelip2303",
   },
   {
     title: "LinkedIn",
-    icon: BsLinkedin,
+    icon: TfiLinkedin,
     url: "https://www.linkedin.com/in/%C3%A1ngel-iglesias-pr%C3%A9stamo-007b561b7/",
+  },
+  {
+    title: "Email",
+    icon: TfiEmail,
+    url: "mailto:angel.iglesias.prestamo@gmail.com",
   },
 ];
 
