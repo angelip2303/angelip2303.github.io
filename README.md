@@ -23,7 +23,6 @@ This project was built using the following technologies:
 
 - React.js
 - Node.js
-- Particles.js
 - CSS3
 
 ## Features
