@@ -46,3 +46,14 @@ a,
 span {
   color: rgb(var(--accent-color));
 }
+
+.icon {
+  padding: 0 0.25em;
+  cursor: pointer;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

@@ -1,9 +1,0 @@
-.icon {
-  padding: 0 0.25em;
-  display: inline-flex;
-  vertical-align: middle;
-}
-
-.icon:hover {
-  transform: scale(1.2);
-}

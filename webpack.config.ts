@@ -1,4 +1,4 @@
-import { Configuration, HotModuleReplacementPlugin } from "webpack";
+import { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
@@ -39,7 +39,6 @@ const webpackConfig: Configuration = {
       favicon: "./src/assets/images/favicon.ico",
       template: "public/index.html",
     }),
-    new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),

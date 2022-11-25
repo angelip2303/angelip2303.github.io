@@ -1,5 +1,3 @@
-import "./MadeWithLove.css";
-
 import { BsHeartFill } from "react-icons/bs";
 
 export default function Footer(): JSX.Element {

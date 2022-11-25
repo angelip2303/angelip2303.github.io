@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import "./App.css";
 
@@ -12,28 +12,30 @@ const Events = React.lazy(() => import("./pages/Events"));
 
 export default function App(): JSX.Element {
   return (
-    <Routes>
-      <Route path="/" element={<HomeLayout />}>
-        <Route index element={<Home />} />
-      </Route>
-      <Route path="/" element={<MainLayout />}>
-        <Route
-          path="projects"
-          element={
-            <React.Suspense fallback={<>...</>}>
-              <Projects />
-            </React.Suspense>
-          }
-        />
-        <Route
-          path="events"
-          element={
-            <React.Suspense fallback={<>...</>}>
-              <Events />
-            </React.Suspense>
-          }
-        />
-      </Route>
-    </Routes>
+    <HashRouter basename="/">
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route
+            path="projects"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Projects />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="events"
+            element={
+              <React.Suspense fallback={<>...</>}>
+                <Events />
+              </React.Suspense>
+            }
+          />
+        </Route>
+        <Route element={<HomeLayout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   );
 }
