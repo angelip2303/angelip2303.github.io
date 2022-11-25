@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter as Router } from "react-router-dom";
 
 import "./App.css";
 
@@ -12,7 +12,7 @@ const Events = React.lazy(() => import("./pages/Events"));
 
 export default function App(): JSX.Element {
   return (
-    <HashRouter basename="/">
+    <Router>
       <Routes>
         <Route element={<MainLayout />}>
           <Route
@@ -36,6 +36,6 @@ export default function App(): JSX.Element {
           <Route index element={<Home />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </Router>
   );
 }
