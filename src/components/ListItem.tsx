@@ -9,9 +9,13 @@ interface ListItemProps {
 }
 
 export default function ListItem(props: ListItemProps): JSX.Element {
+  const style = {
+    "--image": `url(${require("../assets/images/" + props.listItem.image)})`,
+  } as React.CSSProperties;
   return (
     <li
-      className="project"
+      style={style}
+      className="listItem"
       key={props.listItem.name}
       onClick={() => window.open(props.listItem.url, "_blank")}
     >
@@ -19,13 +23,13 @@ export default function ListItem(props: ListItemProps): JSX.Element {
       <h2>{props.listItem.name}</h2>
       <p>{props.listItem.description}</p>
       <ul className="project-items">
-        <li className="project-item" key={props.listItem.technologies[0]}>
+        <li key={props.listItem.technologies[0]}>
           {props.listItem.technologies[0]}
         </li>
         {props.listItem.technologies.slice(1).map((technology) => (
           <React.Fragment key={technology}>
             <span>·</span>
-            <li className="project-item">{technology}</li>
+            <li>{technology}</li>
           </React.Fragment>
         ))}
       </ul>

@@ -1,36 +1,42 @@
-.project {
+.listItem {
   z-index: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 1em;
-  text-align: center;
-  border: 0.1em solid rgba(var(--foreground-color), 0.25);
-  border-radius: 0.25em;
-  cursor: pointer;
   padding: 1em;
-  list-style: none;
+  text-align: center;
+  border-radius: 0.25em;
+  background: linear-gradient(
+      rgba(var(--background-color), 0.95),
+      rgba(var(--background-color), 0.95)
+    ),
+    var(--image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 0.75em 0.075em rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  min-height: 35vh;
 }
 
-.project:last-child:nth-last-child(odd) {
+.listItem:last-child:nth-last-child(odd) {
   grid-column: auto / span 2;
 }
 
 .badge {
-  color: rgb(var(--accent-color));
+  color: rgb(var(--foreground-color));
+  background-color: rgb(var(--accent-color));
+  padding: 0.25em 0.5em 0.35em 0.5em;
+  border-radius: 0.5em;
 }
 
 .project-items {
+  list-style: none;
   display: flex;
   direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.project-item {
-  padding: 0.5em;
-  margin: 0;
-  text-align: center;
-  list-style: none;
+  gap: 0.5em;
 }
