@@ -6,10 +6,11 @@ import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
 const config: Configuration = merge(webpackConfig, {
   mode: "production",
-  devtool: "source-map",
+  cache: true,
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].[chunkhash].ts",
+    filename: "[name].[chunkhash].js",
+    publicPath: "",
     assetModuleFilename: "./src/assets/images/[name].[ext]",
   },
   plugins: [new CleanWebpackPlugin()],
