@@ -1,9 +1,12 @@
 .socials {
-  list-style: none;
   font-size: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 1em;
+}
+
+.social {
+  color: rgb(var(--foreground-color));
 }

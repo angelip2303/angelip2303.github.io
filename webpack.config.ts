@@ -46,6 +46,18 @@ const webpackConfig: Configuration = {
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
   ],
+  optimization: {
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
+  },
 };
 
 export default webpackConfig;

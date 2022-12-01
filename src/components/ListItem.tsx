@@ -22,17 +22,17 @@ export default function ListItem(props: ListItemProps): JSX.Element {
       <span className="badge">{props.listItem.featured}</span>
       <h2>{props.listItem.name}</h2>
       <p>{props.listItem.description}</p>
-      <ul className="project-items">
-        <li key={props.listItem.technologies[0]}>
+      <div className="descriptionItems">
+        <p key={props.listItem.technologies[0]}>
           {props.listItem.technologies[0]}
-        </li>
+        </p>
         {props.listItem.technologies.slice(1).map((technology) => (
           <React.Fragment key={technology}>
             <span>·</span>
-            <li>{technology}</li>
+            <p>{technology}</p>
           </React.Fragment>
         ))}
-      </ul>
+      </div>
     </li>
   );
 }

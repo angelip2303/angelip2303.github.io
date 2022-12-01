@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
-
 :root,
 :root.light {
-  --foreground-color: 46, 52, 64;
+  --foreground-color: 40, 42, 54;
   --background-color: 236, 239, 244;
   --accent-color: 180, 142, 173;
+  --badge-foreground: 236, 239, 244;
+  --badge-background: 40, 42, 54;
   --header-height: 10vh;
   --footer-height: 15vh;
 }
@@ -24,7 +24,7 @@
 
 body {
   color: rgb(var(--foreground-color));
-  background-color: rgb(var(--background-color)); /* TODO: good practice? */
+  background-color: rgb(var(--background-color));
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -45,6 +45,14 @@ h1 {
 a,
 span {
   color: rgb(var(--accent-color));
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 1.25em;
+  color: rgb(var(--accent-color));
+  text-decoration: none;
 }
 
 .icon {

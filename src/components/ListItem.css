@@ -19,7 +19,7 @@
   background-position: center;
   box-shadow: 0 0 0.75em 0.075em rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  min-height: 35vh;
+  min-height: 40vh;
 }
 
 .listItem:last-child:nth-last-child(odd) {
@@ -28,16 +28,15 @@
 
 .badge {
   position: absolute;
-  top: 1em;
-  left: 1em;
-  color: rgb(var(--foreground-color));
-  background-color: rgb(var(--accent-color));
+  top: 0.75em;
+  left: 0.75em;
+  color: rgb(var(--badge-foreground));
+  background-color: rgb(var(--badge-background));
   padding: 0.25em 0.5em 0.35em 0.5em;
   border-radius: 0.5em;
 }
 
-.project-items {
-  list-style: none;
+.descriptionItems {
   display: flex;
   direction: row;
   align-items: center;
