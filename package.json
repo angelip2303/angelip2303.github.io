@@ -1,7 +1,31 @@
 {
   "name": "portfolio",
-  "homepage": "https://angelip2303.github.io/#",
   "version": "0.1.0",
+  "homepage": "https://angelip2303.github.io/#",
+  "scripts": {
+    "build": "webpack --config webpack.prod.config.ts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "webpack serve --config webpack.dev.config.ts --stats-error-details"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -17,30 +41,6 @@
     "react-router-dom": "^6.4.3",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "start": "webpack serve --config webpack.dev.config.ts --stats-error-details",
-    "build": "webpack --config webpack.prod.config.ts"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
