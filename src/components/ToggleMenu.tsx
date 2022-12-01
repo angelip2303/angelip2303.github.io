@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./ToggleMenu.css";
 
 import { IconContext } from "react-icons";
@@ -13,6 +11,7 @@ interface ToggleMenuProps {
 export default function ToggleMenu(props: ToggleMenuProps): JSX.Element {
   return (
     <button
+      type="button"
       onClick={props.toggleMenu}
       title="Button for toggling the nav for mobiles"
     >
