@@ -43,6 +43,7 @@ const webpackConfig: Configuration = {
       async: false,
     }),
     new ESLintPlugin({
+      cache: true,
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
   ],
