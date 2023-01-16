@@ -4,7 +4,7 @@
 </h2>
 
 <center> 
-  <img src="https://raw.githubusercontent.com/angelip2303/angelip2303.github.io/master/public/images/angelip2303.github.gif" alt="screenshot" />
+  <img src="https://raw.githubusercontent.com/angelip2303/angelip2303.github.io/master/public/images/angelip2303.github.jpeg" alt="screenshot" />
 </center>
 
 <div align="center">
