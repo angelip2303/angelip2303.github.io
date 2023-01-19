@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded-sm px-3 py-2 text-lg hover:bg-slate-100 hover:text-slate-800 dark:hover:bg-slate-800 dark:hover:text-slate-300;
+  }
+
+  .header {
+    @apply rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800;
+  }
+
+  .icon {
+    @apply fill-gray-900 dark:fill-slate-300;
+  }
+}

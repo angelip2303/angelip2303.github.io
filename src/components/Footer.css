@@ -1,8 +1,0 @@
-footer {
-  height: var(--footer-height);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.25em;
-  padding: 1em 0;
-}

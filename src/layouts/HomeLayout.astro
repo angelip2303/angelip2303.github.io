@@ -1,0 +1,13 @@
+---
+import Layout from "./Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <div class="flex h-screen flex-col justify-between">
+    <Header />
+    <slot />
+    <Footer />
+  </div>
+</Layout>

@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import List from "../components/List.astro";
+import { projects } from "../data/projects";
+---
+
+<Layout title="The projects I have been working on">
+  <List list={projects} />
+</Layout>

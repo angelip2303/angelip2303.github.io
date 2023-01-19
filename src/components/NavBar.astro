@@ -1,0 +1,15 @@
+---
+import type { INavigationItem } from "../types";
+import { navigation } from "../data/navigation";
+---
+
+<nav class="header mt-4 flex w-full flex-col md:mt-0 md:w-auto md:flex-row">
+  {
+    navigation.map((navigationItem: INavigationItem) => (
+      <a href={navigationItem.url} class="btn flex gap-2">
+        <img src={navigationItem.emoji} />
+        {navigationItem.title}
+      </a>
+    ))
+  }
+</nav>

@@ -1,0 +1,40 @@
+<script is:inline>
+  function applyTheme(theme) {
+    if (theme === "dark") document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+  }
+
+  function attachEvent(selector, event, fn) {
+    const matches =
+      typeof selector === "string"
+        ? document.querySelectorAll(selector)
+        : selector;
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        elem.addEventListener(event, (e) => fn(e, elem), false);
+      });
+    }
+  }
+
+  window.onload = () => {
+    if (
+      localStorage.theme === "dark" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    )
+      applyTheme("dark");
+    else applyTheme("light");
+
+    attachEvent("[data-aw-toggle-color-scheme]", "click", function () {
+      document.documentElement.classList.toggle("dark");
+      localStorage.theme = document.documentElement.classList.contains("dark")
+        ? "dark"
+        : "light";
+    });
+
+    attachEvent("[data-aw-toggle-menu]", "click", function (_, elem) {
+      elem.classList.toggle("expanded");
+      document.getElementById("header")?.classList.toggle("h-screen");
+      document.querySelector("header nav")?.classList.toggle("hidden");
+    });
+  };
+</script>

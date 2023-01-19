@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import List from "../components/List.astro";
+import { events } from "../data/events";
+---
+
+<Layout title="The events I have attended">
+  <List list={events} />
+</Layout>
