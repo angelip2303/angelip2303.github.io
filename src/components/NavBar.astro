@@ -3,10 +3,12 @@ import type { INavigationItem } from "../types";
 import { navigation } from "../data/navigation";
 ---
 
-<nav class="header mt-4 flex w-full flex-col md:mt-0 md:w-auto md:flex-row">
+<nav
+  class="mx-4 hidden h-[calc(100vh-6.5rem)] w-screen flex-col rounded-lg border border-slate-200 bg-slate-100 p-2 dark:border-slate-800 dark:bg-slate-900 md:flex md:h-auto md:w-auto md:flex-row"
+>
   {
     navigation.map((navigationItem: INavigationItem) => (
-      <a href={navigationItem.url} class="btn flex gap-2">
+      <a href={navigationItem.url} class="btn flex gap-1">
         <img src={navigationItem.emoji} />
         {navigationItem.title}
       </a>
