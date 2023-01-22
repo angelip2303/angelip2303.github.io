@@ -13,10 +13,18 @@ Inside of your Astro project, you'll see the following folders and files:
 ```
 /
 ├── public/
+|   |── assets/
+│   │   |── icons/
+│   │   │   └── clock.svg
+│   │   │       ...
+│   │   └── images/
+│   │       └── boxing.webp
+│   │           ...
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   |── common/
+│   │   └── widgets/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
