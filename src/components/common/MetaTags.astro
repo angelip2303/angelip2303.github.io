@@ -7,10 +7,25 @@ const { title, description } = Astro.props;
 <medta name="description" content={description}></medta>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
-  rel="stylesheet"
-/>
 <title>{title}</title>
+<!-- https://fonts.gstatic.com is the font file origin -->
+<!-- It may not have the same origin as the CSS file (https://fonts.googleapis.com) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- We use the full link to the CSS file in the rest of the tags -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=BarlowCondensed&display=swap"
+  />
+</noscript>
