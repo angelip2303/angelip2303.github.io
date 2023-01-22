@@ -8,7 +8,7 @@ import { Icon } from "astro-icon";
   {
     socials.map((social: ISocialMedia) => (
       <li>
-        <a href={social.url}>
+        <a href={social.url} aria-label={social.name}>
           <Icon name={social.icon} class="h-7 w-7" />
         </a>
       </li>

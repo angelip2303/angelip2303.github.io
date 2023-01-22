@@ -4,7 +4,12 @@ import { Icon } from "astro-icon";
 const isDarkTheme = localStorage.theme === "dark";
 ---
 
-<button type="button" class="btn" data-aw-toggle-color-scheme>
+<button
+  type="button"
+  class="btn"
+  aria-label="Toggles Dark\Light mode"
+  data-aw-toggle-color-scheme
+>
   <Icon id="light-mode" name="ph:sun" class="hidden h-8 w-8" />
   <Icon id="dark-mode" name="ph:moon-stars" class="hidden h-8 w-8" />
 </button>
