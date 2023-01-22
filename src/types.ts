@@ -12,3 +12,8 @@ export interface INavigationItem {
   title: string;
   url: string;
 }
+
+export interface ISocialMedia {
+  icon: string;
+  url: string;
+}

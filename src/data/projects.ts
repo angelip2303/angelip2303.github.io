@@ -23,9 +23,9 @@ export const projects: IListItem[] = [
     name: "angelip2303.github.io",
     featured: "Featured Project",
     description:
-      "My personal portfolio website created using React.js and some CSS animations that I like!",
+      "My personal portfolio website created using Astro and TailwindCSS",
     image: "/assets/images/site.webp",
-    technologies: ["React.js", "CSS", "Webpack"],
+    technologies: ["Astro", "TailwindCSS", "TypeScript"],
     url: "https://github.com/angelip2303/angelip2303.github.io",
   },
   {

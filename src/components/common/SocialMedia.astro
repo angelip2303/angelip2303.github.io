@@ -1,0 +1,17 @@
+---
+import type { ISocialMedia } from "../../types";
+import { socials } from "../../data/socials";
+import { Icon } from "astro-icon";
+---
+
+<ul class="flex flex-row items-center justify-center gap-5">
+  {
+    socials.map((social: ISocialMedia) => (
+      <li>
+        <a href={social.url}>
+          <Icon name={social.icon} class="h-7 w-7" />
+        </a>
+      </li>
+    ))
+  }
+</ul>
