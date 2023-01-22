@@ -10,7 +10,7 @@ const { listItem } = Astro.props;
 
 <li
   style={{ backgroundImage: `url(${listItem.image})` }}
-  class="bg-cover bg-center bg-no-repeat shadow-lg"
+  class="bg-cover bg-center bg-no-repeat shadow-lg last:odd:col-span-2"
 >
   <div
     class="relative flex h-full w-full flex-col items-center justify-center gap-4 bg-slate-200 bg-opacity-90 px-5 py-20 text-center dark:bg-slate-800 dark:bg-opacity-90"

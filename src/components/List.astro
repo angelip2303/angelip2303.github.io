@@ -1,14 +1,14 @@
 ---
-import type { ListItemType } from "../types";
+import type { IListItem } from "../types";
 import ListItem from "./ListItem.astro";
 
 export interface ListProps {
-  list: ListItemType[];
+  list: IListItem[];
 }
 
 const { list } = Astro.props;
 ---
 
-<ul class="grid grid-cols-1 gap-5 md:grid-cols-2">
-  {list.map((listItem: ListItemType) => <ListItem listItem={listItem} />)}
+<ul class="grid grid-cols-1 gap-5 bg-gradient-to-br md:grid-cols-2">
+  {list.map((listItem: IListItem) => <ListItem listItem={listItem} />)}
 </ul>
