@@ -1,16 +1,17 @@
 ---
-import type { INavigationItem } from "../../types";
-import { navigation } from "../../data/navigation";
+import type { IMenuItem } from "../../types";
+import { menu } from "../../data/menu";
+import { Icon } from "astro-icon";
 ---
 
 <nav
-  class="hidden h-[calc(100vh-76px)] w-full flex-col items-center justify-center md:flex md:h-auto md:w-auto md:flex-row"
+  class="hidden h-[calc(100vh-76px)] w-full flex-col items-center justify-center gap-2 md:flex md:h-auto md:w-auto md:flex-row"
 >
   {
-    navigation.map((navigationItem: INavigationItem) => (
-      <a href={navigationItem.url} class="btn font-medium">
-        <img src={navigationItem.emoji} />
-        {navigationItem.title}
+    menu.map((menuItem: IMenuItem) => (
+      <a href={menuItem.url} class="btn font-medium">
+        <Icon name={menuItem.icon} class="h-7 w-7" />
+        {menuItem.title}
       </a>
     ))
   }

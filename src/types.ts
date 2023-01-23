@@ -7,8 +7,8 @@ export interface IListItem {
   url: string;
 }
 
-export interface INavigationItem {
-  emoji: string;
+export interface IMenuItem {
+  icon: string;
   title: string;
   url: string;
 }

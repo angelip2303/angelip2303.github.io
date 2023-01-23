@@ -4,6 +4,6 @@
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center gap-1 rounded-sm p-2 text-lg hover:bg-slate-100 dark:hover:bg-slate-800;
+    @apply flex items-center justify-center gap-1.5 rounded-sm p-2 text-lg hover:bg-slate-100 dark:hover:bg-slate-800;
   }
 }
