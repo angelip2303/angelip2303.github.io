@@ -1,5 +1,6 @@
 ---
 import type { IListItem } from "../../types";
+import { Image } from "@astrojs/image/components";
 
 export interface ListItemProps {
   listItem: IListItem;
@@ -8,30 +9,42 @@ export interface ListItemProps {
 const { listItem } = Astro.props;
 ---
 
-<li
-  style={{ backgroundImage: `url(${listItem.image})` }}
-  class="rounded bg-cover bg-center bg-no-repeat shadow-lg last:odd:col-span-2"
->
-  <a
-    class="relative flex h-full w-full flex-col items-center justify-center gap-4 rounded bg-slate-200 bg-opacity-90 px-5 py-20 text-center hover:text-fuchsia-800 dark:bg-slate-800 dark:bg-opacity-90 dark:hover:text-fuchsia-400"
-    href={listItem.url}
+<li class="relative shadow-xl last:odd:col-span-2">
+  <Image
+    src={import(/* @vite-ignore */ "../../assets/images/" + listItem.image)}
+    widths={[200, 400, 800]}
+    sizes="(max-width: 800px) 100vw, 800px"
+    aspectRatio="16:9"
+    alt=""
+    loading="lazy"
+    class="w-full rounded-md aspect-video"
+    format="webp"
+  />
+
+  <div
+    class="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 rounded bg-slate-200 bg-opacity-90 px-5 py-20 text-center dark:bg-slate-800 dark:bg-opacity-90"
   >
-    <span
-      class="absolute top-2 left-2 inline-flex rounded bg-slate-100 p-1 px-2 font-medium dark:bg-slate-900"
-      >{listItem.featured}</span
+    <a
+      class="hover:text-fuchsia-800 dark:hover:text-fuchsia-400"
+      href={listItem.url}
     >
-    <h2 class="text-2xl">{listItem.name}</h2>
-    <p class="text-lg">{listItem.description}</p>
-    <div class="flex flex-row items-center justify-center gap-1">
-      <p>{listItem.technologies[0]}</p>
-      {
-        listItem.technologies.slice(1).map((technology: string) => (
-          <>
-            <span>·</span>
-            <p>{technology}</p>
-          </>
-        ))
-      }
-    </div>
-  </a>
+      <span
+        class="absolute top-2 left-2 inline-flex rounded bg-slate-100 p-1 px-2 font-medium dark:bg-slate-900"
+        >{listItem.featured}</span
+      >
+      <h2 class="text-3xl">{listItem.name}</h2>
+      <p class="text-lg">{listItem.description}</p>
+      <div class="flex flex-row items-center justify-center gap-1">
+        <p>{listItem.technologies[0]}</p>
+        {
+          listItem.technologies.slice(1).map((technology: string) => (
+            <>
+              <span>·</span>
+              <p>{technology}</p>
+            </>
+          ))
+        }
+      </div>
+    </a>
+  </div>
 </li>
