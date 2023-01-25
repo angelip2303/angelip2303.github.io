@@ -1,6 +1,6 @@
 # Welcome to [angelip2303.github.io](https://angelip2303.github.io)
 
-![basics](https://raw.githubusercontent.com/angelip2303/angelip2303.github.io/master/src/assets/images/site.webp)
+![basics](https://raw.githubusercontent.com/angelip2303/angelip2303.github.io/master/public/assets/images/site.webp)
 
 ## 📚 TL;DR
 
