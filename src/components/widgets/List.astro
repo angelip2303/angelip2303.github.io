@@ -9,6 +9,8 @@ export interface ListProps {
 const { list } = Astro.props;
 ---
 
-<ul class="grid grid-cols-1 gap-5 bg-gradient-to-br md:grid-cols-2">
+<ul
+  class="grid grid-cols-1 gap-5 bg-gradient-to-br md:grid-cols-2 2xl:grid-cols-3"
+>
   {list.map((listItem: IListItem) => <ListItem listItem={listItem} />)}
 </ul>

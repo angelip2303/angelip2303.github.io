@@ -9,15 +9,12 @@ export interface ListItemProps {
 const { listItem } = Astro.props;
 ---
 
-<li class="relative shadow-xl last:odd:col-span-2">
+<li class="relative shadow-xl md:last:odd:col-span-2 2xl:last:odd:col-span-3">
   <Image
     src={import(/* @vite-ignore */ "../../assets/images/" + listItem.image)}
-    widths={[200, 400, 800]}
-    sizes="(max-width: 800px) 100vw, 800px"
-    aspectRatio="16:9"
     alt=""
     loading="lazy"
-    class="w-full rounded-md aspect-video"
+    class="w-full rounded-md max-h-[calc(35vh)] aspect-video object-cover"
     format="webp"
   />
 
