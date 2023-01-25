@@ -5,5 +5,12 @@ import image from "@astrojs/image";
 
 export default defineConfig({
   site: "https://angelip2303.github.io/",
-  integrations: [tailwind(), image()],
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    image(),
+  ],
 });
