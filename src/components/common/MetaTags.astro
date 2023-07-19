@@ -1,12 +1,14 @@
 ---
+import "../../styles/global.css";
+
 const { title, description } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <meta name="description" content={description} />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <title>{title}</title>
 <!-- https://fonts.gstatic.com is the font file origin -->
 <!-- It may not have the same origin as the CSS file (https://fonts.googleapis.com) -->
