@@ -13,7 +13,7 @@ export const socials: ISocialMedia[] = [
   },
   {
     icon: "ph:linkedin-logo",
-    url: "https://www.linkedin.com/in/%C3%A1ngel-iglesias-pr%C3%A9stamo-007b561b7/",
+    url: "https://www.linkedin.com/in/angel-iglesias-prestamo",
     name: "Link to my LinkedIn page",
   },
 ];

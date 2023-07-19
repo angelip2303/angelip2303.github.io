@@ -2,6 +2,55 @@ import type { IListItem } from "../types";
 
 export const projects: IListItem[] = [
   {
+    name: "wd2duckdb",
+    featured: "Happy Accident",
+    description:
+      "Application that transforms a Wikidata JSON dump into a DuckDB database.",
+    image: "wd2duckdb.webp",
+    technologies: ["Rust", "DuckDB", "Wikidata", "JSON", "ETL", "CLI"],
+    url: "https://github.com/angelip2303/wd2duckdb",
+  },
+  {
+    name: "pregel-rs",
+    featured: "Featured Project",
+    description:
+      "A Graph library written in Rust for implementing your own algorithms in a Pregel fashion.",
+    image: "pregel.webp",
+    technologies: [
+      "Rust",
+      "Knowledge Graphs",
+      "Algorithms",
+      "Pregel",
+      "Pola-rs",
+    ],
+    url: "https://github.com/angelip2303/pregel-rs",
+  },
+  {
+    name: "pschema-rs",
+    featured: "Featured Project",
+    description:
+      "Pregel-based schema validation algorithm written in Rust for generating Wikidata subsets.",
+    image: "pschema.webp",
+    technologies: [
+      "Rust",
+      "Knowledge Graphs",
+      "Algorithms",
+      "Pregel",
+      "Pola-rs",
+      "ShEx",
+    ],
+    url: "https://github.com/angelip2303/pschema-rs",
+  },
+  {
+    name: "TFG",
+    featured: "Featured Project",
+    description:
+      "Documentation of the Final Degree Project on the analysis and implementation of an algorithm to validate Knowledge Graphs using Big data techniques.",
+    image: "tfg.webp",
+    technologies: ["Documentation", "Latex", "RDF", "Research"],
+    url: "https://angelip2303.github.io/tfg/",
+  },
+  {
     name: "Decentralized Delivery",
     featured: "Featured Project",
     description:

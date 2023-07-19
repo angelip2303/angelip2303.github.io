@@ -10,13 +10,14 @@ export interface ListItemProps {
 const { listItem } = Astro.props;
 ---
 
-<li class="relative shadow-xl md:last:odd:col-span-2 2xl:last:odd:col-span-3">
+<li
+  class="relative shadow-xl md:last:odd:col-span-2 2xl:last:first:col-span-3 2xl:last:[&:nth-child(3n+1)]:col-span-3 2xl:last:[&:nth-child(3n+2)]:col-span-2"
+>
   <Image
     src={"/assets/images/" + listItem.image}
     width={1080}
-    height={1920}
-    aspectRatio={1}
-    alt=""
+    aspectRatio="16:9"
+    alt={listItem.description}
     loading="lazy"
     class="w-full rounded-md max-h-[calc(35vh)] aspect-video object-cover"
     format="webp"
