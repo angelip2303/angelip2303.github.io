@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<button
+    aria-label="scroll-down"
+    class="scroll-down"
+>
+    <Icon name="ph:caret-down" class="h-7 w-7" />
+</button>
+
+<script>
+    const buttons = document.querySelectorAll('button.scroll-down');
+  
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+      });
+    });
+</script>

@@ -1,0 +1,19 @@
+---
+import Card from "../common/Card.astro";
+
+import type { IListItem } from "../../types";
+
+export interface ListProps {
+  list: IListItem[];
+}
+
+const { list } = Astro.props;
+---
+
+<section
+  class={`
+    grid lg:grid-cols-10 auto-rows-[30rem]
+    gap-4
+`}>
+  { list.map((listItem: IListItem) => <Card listItem={listItem} />) }
+</section>

@@ -1,0 +1,15 @@
+---
+import Timeline from "../common/Timeline.astro";
+
+import type { IExperienceItem } from "../../types";
+
+export interface ListProps {
+  list: IExperienceItem[];
+}
+
+const { list } = Astro.props;
+---
+
+<ol class="flex flex-col justify-center">
+  { list.map((experience: IExperienceItem) => <Timeline experience={ experience } />) }
+</ol>

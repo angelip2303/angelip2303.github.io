@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/HomeLayout.astro";
+import Bento from "../widgets/Bento.astro";
+import Section from "../common/Section.astro";
+import Hero from "../widgets/Hero.astro";
+import Experience from "../widgets/Experience.astro";
+
+import { projects } from "../../data/projects";
+import { events } from "../../data/events";
+import { experience } from "../../data/experience";
+
+import { experienceSection, projectsSection, eventsSection } from "../../data/sections"
+---
+
+<Layout>
+  <main class="flex-col w-4/5 mx-auto space-y-12">
+    <Hero />
+    <Section section={experienceSection}>
+      <Experience list={experience} />
+    </Section>
+    <Section section={projectsSection}>
+      <Bento list={projects} />
+    </Section>
+    <Section section={eventsSection}>
+      <Bento list={events} />
+    </Section>
+  </main>
+</Layout>

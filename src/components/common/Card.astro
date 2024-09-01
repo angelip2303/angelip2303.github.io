@@ -1,0 +1,57 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+import Tag from './Tag.astro';
+import Bullets from './Bullets.astro';
+
+import type { IListItem } from "../../types";
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}');
+
+export interface ListItemProps {
+  listItem: IListItem;
+}
+
+const { listItem } = Astro.props;
+---
+
+<a
+  class={`
+    ${listItem.class}
+    relative
+    rounded-xl
+    overflow-hidden
+    border border-slate-100 dark:border-slate-800
+    group
+  `}
+  href={listItem.url}
+>
+  <div class=""/>
+  <Image
+  src={images[listItem.image]()}
+  alt={listItem.description}
+  class={`
+    h-full w-full
+    transition-scale
+    duration-1000 ease-in-out group-hover:scale-110
+  `}
+  />
+
+  <div
+    class={`
+      absolute
+      top-0
+      flex flex-col items-center justify-center gap-4
+      h-full w-full
+      px-5 py-20
+      text-center
+      bg-slate-200 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-90
+    `}
+  >
+    <Tag text={listItem.featured} />
+    <h2 class="text-3xl">{listItem.name}</h2>
+    <p class="text-lg">{listItem.description}</p>
+    <Bullets bullets={listItem.technologies} />
+  </div>
+</a>
