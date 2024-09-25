@@ -4,18 +4,18 @@ import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 export interface Props {
-    socialItem: CollectionEntry<'socials'>;
+  socialItem: CollectionEntry<"socials">;
 }
 
-const { socialItem } = Astro.props
-const { data } = socialItem
-const { icon, url, alt } = data
+const { socialItem } = Astro.props;
+const { data } = socialItem;
+const { icon, url, alt } = data;
 
-export const prerender = true
+export const prerender = true;
 ---
 
 <li>
-    <a href={url} aria-label={alt}>
-        <Icon name={icon} class="h-7 w-7" />
-    </a>
+  <a href={url} aria-label={alt}>
+    <Icon name={icon} class="h-7 w-7" />
+  </a>
 </li>

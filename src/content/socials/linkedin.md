@@ -1,5 +1,0 @@
----
-icon: ph:linkedin-logo
-url: https://www.linkedin.com/in/angel-iglesias-prestamo
-alt: Link to my LinkedIn page
----

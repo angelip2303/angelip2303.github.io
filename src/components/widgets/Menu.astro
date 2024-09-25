@@ -1,9 +1,9 @@
 ---
-import { getCollection } from "astro:content"
+import { getCollection } from "astro:content";
 
 import MenuItem from "../common/MenuItem.astro";
 
-const menu = await getCollection('menu')
+const menu = await getCollection("menu");
 ---
 
 <nav
@@ -15,7 +15,5 @@ const menu = await getCollection('menu')
     gap-2
   `}
 >
-  {
-    menu.map((menuItem) => (<MenuItem menuItem={menuItem} />))
-  }
+  {menu.map((menuItem) => <MenuItem menuItem={menuItem} />)}
 </nav>

@@ -3,9 +3,9 @@ import { getCollection } from "astro:content";
 
 import Timeline from "../common/Timeline.astro";
 
-const experience = await getCollection('experience')
+const experience = await getCollection("experience");
 ---
 
 <ol class="flex flex-col justify-center">
-  { experience.map((experience) => <Timeline experience={ experience } />) }
+  {experience.map((experience) => <Timeline experience={experience} />)}
 </ol>

@@ -1,0 +1,30 @@
+{
+  "$ref": "#/definitions/socials",
+  "definitions": {
+    "socials": {
+      "type": "object",
+      "properties": {
+        "icon": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "alt": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "icon",
+        "url",
+        "alt"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

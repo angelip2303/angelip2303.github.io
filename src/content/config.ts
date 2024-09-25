@@ -1,63 +1,43 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
+import { glob } from 'astro/loaders';
+
+import { experienceSchema, listItemSchema, menuSchema, sectionSchema, socialItemSchema } from '../schemas';
 
 const menu = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        icon: z.string(),
-        url: z.string()
-    })
-})
+  loader: glob({ pattern: "*.yaml", base: "src/data/menu" }),
+  schema: menuSchema,
+});
 
 const sections = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        subtitle: z.string(),
-    })
-})
+  loader: glob({ pattern: "*.md", base: "src/data/sections" }),
+  schema: sectionSchema,
+});
 
 const experience = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        date: z.date(),
-        description: z.string(),
-    })
-})
+  loader: glob({ pattern: "*.yaml", base: "src/data/experience" }),
+  schema: experienceSchema,
+});
 
 const projects = defineCollection({
-    schema: z.object({
-        name: z.string(),
-        featured: z.string(),
-        description: z.string(),
-        image: z.string(),
-        technologies: z.array(z.string()),
-        url: z.string().url()
-    })
-})
+  loader: glob({ pattern: "*.md", base: "src/data/projects" }),
+  schema: listItemSchema,
+});
 
 const talks = defineCollection({
-    schema: z.object({
-        name: z.string(),
-        featured: z.string(),
-        description: z.string(),
-        image: z.string(),
-        technologies: z.array(z.string()),
-        url: z.string().url()
-    })
-})
+  loader: glob({ pattern: "*.md", base: "src/data/talks" }),
+  schema: listItemSchema,
+});
 
 const socials = defineCollection({
-    schema: z.object({
-        icon: z.string(),
-        url: z.string().url(),
-        alt: z.string()
-    })
-})
+  loader: glob({ pattern: "*.yaml", base: "src/data/socials" }),
+  schema: socialItemSchema,
+});
 
 export const collections = {
-    'menu': menu,
-    'sections': sections,
-    'experience': experience,
-    'projects': projects,
-    'talks': talks,
-    'socials': socials
-  };
+    menu,
+    sections,
+    experience,
+    projects,
+    talks,
+    socials
+};

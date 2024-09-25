@@ -1,0 +1,38 @@
+import { z } from "astro:content";
+
+export const menuSchema = 
+    z.object({
+      title: z.string(),
+      icon: z.string(),
+      url: z.string(),
+    });
+  
+export const sectionSchema = 
+    z.object({
+        title: z.string(),
+        subtitle: z.string(),
+    });
+  
+export const experienceSchema = 
+    z.object({
+        title: z.string(),
+        date: z.date(),
+        description: z.string(),
+    });
+  
+export const listItemSchema = 
+    z.object({
+        name: z.string(),
+        featured: z.string(),
+        description: z.string(),
+        image: z.string(),
+        technologies: z.array(z.string()),
+        url: z.string().url(),
+    });
+
+export const socialItemSchema = 
+    z.object({
+        icon: z.string(),
+        url: z.string().url(),
+        alt: z.string(),
+    });

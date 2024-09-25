@@ -1,22 +1,24 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
-import Tag from './Tag.astro';
-import Bullets from './Bullets.astro';
+import Tag from "./Tag.astro";
+import Bullets from "./Bullets.astro";
 
 interface Props {
-  listItem: CollectionEntry<'events'>;
+  listItem: CollectionEntry<'talks' | 'projects'>;
 }
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
 
-const { listItem } = Astro.props
-const { data } = listItem
-const { name, featured, description, image, technologies, url } = data
+const { listItem } = Astro.props;
+const { data } = listItem;
+const { name, featured, description, image, technologies, url } = data;
 
-export const prerender = true
+export const prerender = true;
 ---
 
 <a
@@ -29,11 +31,11 @@ export const prerender = true
   `}
   href={url}
 >
-  <div class=""/>
+  <!-- <div class=""></div> --> TODO
   <Image
-  src={images[image]()}
-  alt={description}
-  class={`
+    src={images[image]()}
+    alt={description}
+    class={`
     h-full w-full
     transition-scale
     duration-1000 ease-in-out group-hover:scale-110

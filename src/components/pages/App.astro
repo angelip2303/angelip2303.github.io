@@ -1,5 +1,5 @@
 ---
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry } from "astro:content";
 
 import Layout from "../../layouts/HomeLayout.astro";
 import Bento from "../widgets/Bento.astro";
@@ -7,16 +7,16 @@ import Section from "../common/Section.astro";
 import Hero from "../widgets/Hero.astro";
 import Experience from "../widgets/Experience.astro";
 
-const experienceSection = await getEntry('sections', 'experience');
-const projectsSection = await getEntry('sections', 'projects');
-const talksSection = await getEntry('sections', 'talks');
+const experienceSection = await getEntry("sections", "experience");
+const projectsSection = await getEntry("sections", "projects");
+const talksSection = await getEntry("sections", "talks");
 
-const projects = await getCollection('projects')
-const talks = await getCollection('talks')
+const projects = await getCollection("projects");
+const talks = await getCollection("talks");
 ---
 
 <Layout>
-  <main class="flex-col w-4/5 mx-auto space-y-12">
+  <main class="mx-auto w-4/5 flex-col space-y-12">
     <Hero />
     <Section section={experienceSection}>
       <Experience />

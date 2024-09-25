@@ -140,207 +140,50 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"events": Record<string, {
-  id: string;
-  slug: string;
-  body: string;
-  collection: "events";
-  data: any;
-  render(): Render[".md"];
-}>;
-"experience": {
-"empathy.md": {
-	id: "empathy.md";
-  slug: "empathy";
-  body: string;
-  collection: "experience";
-  data: InferEntrySchema<"experience">
-} & { render(): Render[".md"] };
-"uniovi.md": {
-	id: "uniovi.md";
-  slug: "uniovi";
-  body: string;
-  collection: "experience";
-  data: InferEntrySchema<"experience">
-} & { render(): Render[".md"] };
-};
-"menu": {
-"experience.md": {
-	id: "experience.md";
-  slug: "experience";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
-"home.md": {
-	id: "home.md";
-  slug: "home";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
-"projects.md": {
-	id: "projects.md";
-  slug: "projects";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
-"publications.md": {
-	id: "publications.md";
-  slug: "publications";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
-"talks.md": {
-	id: "talks.md";
-  slug: "talks";
-  body: string;
-  collection: "menu";
-  data: any
-} & { render(): Render[".md"] };
-};
-"projects": {
-"angelip2303-github-io.md": {
-	id: "angelip2303-github-io.md";
-  slug: "angelip2303-github-io";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"boxing-game.md": {
-	id: "boxing-game.md";
-  slug: "boxing-game";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"c-minus-minus.md": {
-	id: "c-minus-minus.md";
-  slug: "c-minus-minus";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"decentralized-delivery.md": {
-	id: "decentralized-delivery.md";
-  slug: "decentralized-delivery";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"minipaint.md": {
-	id: "minipaint.md";
-  slug: "minipaint";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"pong.md": {
-	id: "pong.md";
-  slug: "pong";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"pregel-rs.md": {
-	id: "pregel-rs.md";
-  slug: "pregel-rs";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"pschema-rs.md": {
-	id: "pschema-rs.md";
-  slug: "pschema-rs";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"tfg.md": {
-	id: "tfg.md";
-  slug: "tfg";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-"wd2duckdb.md": {
-	id: "wd2duckdb.md";
-  slug: "wd2duckdb";
-  body: string;
-  collection: "projects";
-  data: InferEntrySchema<"projects">
-} & { render(): Render[".md"] };
-};
-"sections": {
-"experience.md": {
-	id: "experience.md";
-  slug: "experience";
-  body: string;
-  collection: "sections";
-  data: InferEntrySchema<"sections">
-} & { render(): Render[".md"] };
-"projects.md": {
-	id: "projects.md";
-  slug: "projects";
-  body: string;
-  collection: "sections";
-  data: InferEntrySchema<"sections">
-} & { render(): Render[".md"] };
-"talks.md": {
-	id: "talks.md";
-  slug: "talks";
-  body: string;
-  collection: "sections";
-  data: InferEntrySchema<"sections">
-} & { render(): Render[".md"] };
-};
-"socials": {
-"email.md": {
-	id: "email.md";
-  slug: "email";
-  body: string;
-  collection: "socials";
-  data: any
-} & { render(): Render[".md"] };
-"github.md": {
-	id: "github.md";
-  slug: "github";
-  body: string;
-  collection: "socials";
-  data: any
-} & { render(): Render[".md"] };
-"linkedin.md": {
-	id: "linkedin.md";
-  slug: "linkedin";
-  body: string;
-  collection: "socials";
-  data: any
-} & { render(): Render[".md"] };
-};
-"talks": {
-"solid.md": {
-	id: "solid.md";
-  slug: "solid";
-  body: string;
-  collection: "talks";
-  data: InferEntrySchema<"talks">
-} & { render(): Render[".md"] };
-};
-
+		
 	};
 
 	type DataEntryMap = {
-		"publications": Record<string, {
+		"experience": Record<string, {
   id: string;
-  collection: "publications";
-  data: any;
+  collection: "experience";
+  data: InferEntrySchema<"experience">;
+  rendered?: RenderedContent 
+}>;
+"menu": Record<string, {
+  id: string;
+  collection: "menu";
+  data: InferEntrySchema<"menu">;
+  rendered?: RenderedContent 
+}>;
+"projects": Record<string, {
+  id: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">;
+  rendered?: RenderedContent 
+}>;
+"sections": Record<string, {
+  id: string;
+  collection: "sections";
+  data: InferEntrySchema<"sections">;
+  rendered?: RenderedContent 
+}>;
+"socials": Record<string, {
+  id: string;
+  collection: "socials";
+  data: InferEntrySchema<"socials">;
+  rendered?: RenderedContent 
+}>;
+"talks": Record<string, {
+  id: string;
+  collection: "talks";
+  data: InferEntrySchema<"talks">;
+  rendered?: RenderedContent 
 }>;
 
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../../src/content/config.mjs");
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }

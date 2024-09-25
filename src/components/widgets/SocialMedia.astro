@@ -1,13 +1,11 @@
 ---
-import { getCollection } from "astro:content"
+import { getCollection } from "astro:content";
 
 import SocialItem from "../common/SocialItem.astro";
 
-const socials = await getCollection('socials')
+const socials = await getCollection("socials");
 ---
 
 <ul class="flex flex-row items-center justify-center gap-5">
-  {
-    socials.map((socialItem) => (<SocialItem socialItem={socialItem} />))
-  }
+  {socials.map((socialItem) => <SocialItem socialItem={socialItem} />)}
 </ul>
