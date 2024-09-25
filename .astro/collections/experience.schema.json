@@ -30,11 +30,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "title",
-        "date",
-        "description"
-      ],
+      "required": ["title", "date", "description"],
       "additionalProperties": false
     }
   },

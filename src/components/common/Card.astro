@@ -7,7 +7,7 @@ import Tag from "./Tag.astro";
 import Bullets from "./Bullets.astro";
 
 interface Props {
-  listItem: CollectionEntry<'talks' | 'projects'>;
+  listItem: CollectionEntry<"talks" | "projects">;
 }
 
 const images = import.meta.glob<{ default: ImageMetadata }>(

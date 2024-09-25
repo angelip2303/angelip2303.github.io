@@ -1,7 +1,13 @@
 import { defineCollection } from "astro:content";
-import { glob } from 'astro/loaders';
+import { glob } from "astro/loaders";
 
-import { experienceSchema, listItemSchema, menuSchema, sectionSchema, socialItemSchema } from '../schemas';
+import {
+  experienceSchema,
+  listItemSchema,
+  menuSchema,
+  sectionSchema,
+  socialItemSchema,
+} from "../schemas";
 
 const menu = defineCollection({
   loader: glob({ pattern: "*.yaml", base: "src/data/menu" }),
@@ -34,10 +40,10 @@ const socials = defineCollection({
 });
 
 export const collections = {
-    menu,
-    sections,
-    experience,
-    projects,
-    talks,
-    socials
+  menu,
+  sections,
+  experience,
+  projects,
+  talks,
+  socials,
 };
