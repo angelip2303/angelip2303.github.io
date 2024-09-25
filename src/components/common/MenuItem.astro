@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { Icon } from "astro-icon/components";
+
+export interface Props {
+    menuItem: CollectionEntry<'menu'>;
+}
+
+const { menuItem } = Astro.props
+const { data } = menuItem
+const { title, icon, url } = data
+
+export const prerender = true
+---
+
+<a href={url} class="btn font-medium">
+    <Icon name={icon} class="h-7 w-7" />
+    {title}
+</a>

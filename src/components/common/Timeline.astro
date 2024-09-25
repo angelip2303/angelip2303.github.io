@@ -1,11 +1,15 @@
 ---
-import type { IExperienceItem } from "../../types";
+import type { CollectionEntry } from "astro:content";
 
-export interface ListItemProps {
-    experience: IExperienceItem;
+export interface Props {
+    experience: CollectionEntry<'experience'>;
 }
 
-const { experience } = Astro.props;
+const { experience } = Astro.props
+const { data } = experience
+const { title, date, description } = data
+
+export const prerender = true
 ---
 
 <li class="relative pl-8 sm:pl-32 py-6 group">
@@ -31,9 +35,9 @@ const { experience } = Astro.props;
             text-emerald-600 bg-emerald-100
             rounded-full
         `}>
-            { experience.date }
+            { date }
         </time>
-        <h3 class="text-xl font-bold"> { experience.title } </h3>
+        <h3 class="text-xl font-bold"> { title } </h3>
     </span>
-    <p> { experience.description } </p>
+    <p> { description } </p>
 </li>

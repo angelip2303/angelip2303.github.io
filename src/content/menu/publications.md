@@ -1,0 +1,5 @@
+---
+title: Publications
+icon: noto:house-with-garden
+url: /publications
+---

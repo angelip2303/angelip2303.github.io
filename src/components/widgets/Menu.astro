@@ -1,8 +1,9 @@
 ---
-import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content"
 
-import type { IMenuItem } from "../../types";
-import { menu } from "../../data/menu";
+import MenuItem from "../common/MenuItem.astro";
+
+const menu = await getCollection('menu')
 ---
 
 <nav
@@ -15,11 +16,6 @@ import { menu } from "../../data/menu";
   `}
 >
   {
-    menu.map((menuItem: IMenuItem) => (
-      <a href={menuItem.url} class="btn font-medium">
-        <Icon name={menuItem.icon} class="h-7 w-7" />
-        {menuItem.title}
-      </a>
-    ))
+    menu.map((menuItem) => (<MenuItem menuItem={menuItem} />))
   }
 </nav>

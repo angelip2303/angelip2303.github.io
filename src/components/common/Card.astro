@@ -1,36 +1,38 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import type { CollectionEntry } from "astro:content";
 
 import Tag from './Tag.astro';
 import Bullets from './Bullets.astro';
 
-import type { IListItem } from "../../types";
+interface Props {
+  listItem: CollectionEntry<'events'>;
+}
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}');
 
-export interface ListItemProps {
-  listItem: IListItem;
-}
+const { listItem } = Astro.props
+const { data } = listItem
+const { name, featured, description, image, technologies, url } = data
 
-const { listItem } = Astro.props;
+export const prerender = true
 ---
 
 <a
   class={`
-    ${listItem.class}
     relative
     rounded-xl
     overflow-hidden
     border border-slate-100 dark:border-slate-800
     group
   `}
-  href={listItem.url}
+  href={url}
 >
   <div class=""/>
   <Image
-  src={images[listItem.image]()}
-  alt={listItem.description}
+  src={images[image]()}
+  alt={description}
   class={`
     h-full w-full
     transition-scale
@@ -49,9 +51,9 @@ const { listItem } = Astro.props;
       bg-slate-200 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-90
     `}
   >
-    <Tag text={listItem.featured} />
-    <h2 class="text-3xl">{listItem.name}</h2>
-    <p class="text-lg">{listItem.description}</p>
-    <Bullets bullets={listItem.technologies} />
+    <Tag text={featured} />
+    <h2 class="text-3xl">{name}</h2>
+    <p class="text-lg">{description}</p>
+    <Bullets bullets={technologies} />
   </div>
 </a>
