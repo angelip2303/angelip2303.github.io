@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.1",
+    "@fontsource/barlow-condensed": "^5.1.0",
     "@iconify-json/noto": "^1.2.0",
     "@iconify-json/ph": "^1.2.0",
     "astro": "^5.0.0-beta.2",

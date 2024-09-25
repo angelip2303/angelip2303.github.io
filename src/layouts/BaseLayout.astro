@@ -4,6 +4,9 @@ import { SITE } from "../config";
 import BasicScripts from "../components/common/BasicScripts.astro";
 import MetaTags from "../components/common/MetaTags.astro";
 
+import "@fontsource/barlow-condensed";
+import barlowCondensed from "@fontsource/barlow-condensed/files/barlow-condensed-latin-400-normal.woff?url";
+
 const { title = SITE.title, description = SITE.description } = Astro.props;
 ---
 
@@ -11,6 +14,13 @@ const { title = SITE.title, description = SITE.description } = Astro.props;
 <html lang="en">
   <head>
     <MetaTags title={title} description={description} />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={barlowCondensed}
+      crossorigin="anonymous"
+    />
   </head>
   <body
     class={`
