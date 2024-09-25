@@ -1,5 +1,5 @@
 ---
-title: Events
+title: Talks
 subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
