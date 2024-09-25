@@ -1,12 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 
 interface Props {
   section: CollectionEntry<"sections">;
 }
 
 const { section } = Astro.props;
-const { Content } = await section.render();
+const { Content } = await render(section);
 ---
 
 <section class="flex flex-col items-center gap-3">

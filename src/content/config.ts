@@ -10,7 +10,7 @@ import {
 } from "../schemas";
 
 const menu = defineCollection({
-  loader: glob({ pattern: "*.yaml", base: "src/data/menu" }),
+  loader: glob({ pattern: "*.json", base: "src/data/menu" }),
   schema: menuSchema,
 });
 
@@ -20,7 +20,7 @@ const sections = defineCollection({
 });
 
 const experience = defineCollection({
-  loader: glob({ pattern: "*.yaml", base: "src/data/experience" }),
+  loader: glob({ pattern: "*.json", base: "src/data/experience" }),
   schema: experienceSchema,
 });
 
@@ -35,7 +35,7 @@ const talks = defineCollection({
 });
 
 const socials = defineCollection({
-  loader: glob({ pattern: "*.yaml", base: "src/data/socials" }),
+  loader: glob({ pattern: "*.json", base: "src/data/socials" }),
   schema: socialItemSchema,
 });
 

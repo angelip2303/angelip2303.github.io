@@ -13,7 +13,7 @@ export const sectionSchema = z.object({
 
 export const experienceSchema = z.object({
   title: z.string(),
-  date: z.date(),
+  date: z.string(),
   description: z.string(),
 });
 
