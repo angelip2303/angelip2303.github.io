@@ -7,7 +7,7 @@ date: October 2023
 book: Knowledge Graphs and Semantic Web
 conference: Knowledge Graph and Semantic Web Conference
 featured: true
-path: /public/pdf/using-pregel-to-create-knowledge-graphs-subsets-described-by-non-recursive-shape-expressions.pdf
+path: /pdf/using-pregel-to-create-knowledge-graphs-subsets-described-by-non-recursive-shape-expressions.pdf
 doi: https://link.springer.com/chapter/10.1007/978-3-031-47745-4_10
 ---
 
