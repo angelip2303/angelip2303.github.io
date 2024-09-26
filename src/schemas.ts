@@ -1,7 +1,7 @@
 import { z } from "astro:content";
 
 export const menuSchema = z.object({
-  title: z.string(),
+  id: z.string(),
   icon: z.string(),
   url: z.string(),
 });

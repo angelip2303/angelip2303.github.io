@@ -9,12 +9,12 @@ export interface Props {
 
 const { menuItem } = Astro.props;
 const { data } = menuItem;
-const { title, icon, url } = data;
+const { id, icon, url } = data;
 
 export const prerender = true;
 ---
 
-<a href={url} class="btn font-medium">
+<a href={url} class="btn nav-link font-medium">
   <Icon name={icon} class="h-7 w-7" />
-  {title}
+  {id}
 </a>

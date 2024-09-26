@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 
 import {
   experienceSchema,
@@ -10,7 +10,7 @@ import {
 } from "../schemas";
 
 const menu = defineCollection({
-  loader: glob({ pattern: "*.json", base: "src/data/menu" }),
+  loader: file("src/data/menu/menu.json"),
   schema: menuSchema,
 });
 

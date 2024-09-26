@@ -1,0 +1,27 @@
+[
+  {
+    "id": "Home",
+    "icon": "noto:house-with-garden",
+    "url": "#Home"
+  },
+  {
+    "id": "Experience",
+    "icon": "noto:house-with-garden",
+    "url": "#Experience"
+  },
+  {
+    "id": "Projects",
+    "icon": "noto:rocket",
+    "url": "#Projects"
+  },
+  {
+    "id": "Publications",
+    "icon": "noto:house-with-garden",
+    "url": "#Publications"
+  },
+  {
+    "id": "Talks",
+    "icon": "noto:alarm-clock",
+    "url": "#Talks"
+  }
+]

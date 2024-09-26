@@ -61,4 +61,29 @@
     document.getElementById("menu-icon")?.classList.remove("hidden");
     document.getElementById("close-icon")?.classList.add("hidden");
   };
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute("href").slice(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const offset = 80;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        } else {
+          console.error(`Elemento con ID "${targetId}" no encontrado.`);
+        }
+      });
+    });
+  });
 </script>
