@@ -9,9 +9,11 @@ import Bento from "../widgets/Bento.astro";
 
 const experienceSection = await getEntry("sections", "experience");
 const projectsSection = await getEntry("sections", "projects");
+const publicationsSection = await getEntry("sections", "publications");
 const talksSection = await getEntry("sections", "talks");
 
 const projects = await getCollection("projects");
+const publications = await getCollection("publications");
 const talks = await getCollection("talks");
 ---
 
@@ -23,6 +25,9 @@ const talks = await getCollection("talks");
     </Section>
     <Section section={projectsSection}>
       <Bento list={projects} />
+    </Section>
+    <Section section={publicationsSection}>
+      <Bento list={publications} />
     </Section>
     <Section section={talksSection}>
       <Bento list={talks} />

@@ -29,6 +29,11 @@ const projects = defineCollection({
   schema: listItemSchema,
 });
 
+const publications = defineCollection({
+  loader: glob({ pattern: "*.md", base: "src/data/publications" }),
+  schema: listItemSchema,
+});
+
 const talks = defineCollection({
   loader: glob({ pattern: "*.md", base: "src/data/talks" }),
   schema: listItemSchema,
@@ -44,6 +49,7 @@ export const collections = {
   sections,
   experience,
   projects,
+  publications,
   talks,
   socials,
 };

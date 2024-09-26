@@ -175,6 +175,15 @@ declare module "astro:content" {
         rendered?: RenderedContent;
       }
     >;
+    publications: Record<
+      string,
+      {
+        id: string;
+        collection: "publications";
+        data: InferEntrySchema<"publications">;
+        rendered?: RenderedContent;
+      }
+    >;
     sections: Record<
       string,
       {
