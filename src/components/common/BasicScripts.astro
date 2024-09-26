@@ -21,6 +21,19 @@
     }
   }
 
+  function toggleMenu() {
+    const menuToggle = document.querySelector("[data-aw-toggle-menu]");
+    if (menuToggle) {
+      menuToggle.classList.toggle("expanded");
+      document.body.classList.toggle("overflow-hidden");
+      document.querySelector("header")?.classList.toggle("h-screen");
+      document.querySelector("nav")?.classList.toggle("hidden");
+      document.querySelector("nav")?.classList.toggle("flex");
+      document.getElementById("menu-icon")?.classList.toggle("hidden");
+      document.getElementById("close-icon")?.classList.toggle("hidden");
+    }
+  }
+
   window.onload = () => {
     if (localStorage.theme === undefined) {
       if (window.matchMedia("(prefers-color-scheme: dark)").matches)
@@ -40,14 +53,8 @@
       document.getElementById("light-mode")?.classList.toggle("hidden");
     });
 
-    attachEvent("[data-aw-toggle-menu]", "click", (_, elem) => {
-      elem.classList.toggle("expanded");
-      document.body.classList.toggle("overflow-hidden");
-      document.querySelector("header")?.classList.toggle("h-screen");
-      document.querySelector("nav")?.classList.toggle("hidden");
-      document.querySelector("nav")?.classList.toggle("flex");
-      document.getElementById("menu-icon")?.classList.toggle("hidden");
-      document.getElementById("close-icon")?.classList.toggle("hidden");
+    attachEvent("[data-aw-toggle-menu]", "click", () => {
+      toggleMenu(); // Use the toggle function
     });
   };
 
@@ -64,6 +71,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
+
     navLinks.forEach((link) => {
       link.addEventListener("click", function (event) {
         event.preventDefault();
@@ -72,7 +80,9 @@
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-          const offset = 80;
+          const header = document.querySelector("header");
+          const offset = header ? header.offsetHeight : 0;
+
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.scrollY - offset;
 
@@ -80,8 +90,16 @@
             top: offsetPosition,
             behavior: "smooth",
           });
+
+          if (
+            document
+              .querySelector("[data-aw-toggle-menu]")
+              .classList.contains("expanded")
+          ) {
+            toggleMenu();
+          }
         } else {
-          console.error(`Elemento con ID "${targetId}" no encontrado.`);
+          console.error(`Element "${targetId}" not found.`);
         }
       });
     });
