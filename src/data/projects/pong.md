@@ -1,6 +1,6 @@
 ---
 name: Pong!
-featured: Happy Accident
+featured: false
 description: Version of the Pong game to be played in the browser and implemented using a physics engine.
 image: /src/assets/pong.webp
 technologies:

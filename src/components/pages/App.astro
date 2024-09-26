@@ -2,10 +2,10 @@
 import { getCollection, getEntry } from "astro:content";
 
 import Layout from "../../layouts/HomeLayout.astro";
-import Bento from "../widgets/Bento.astro";
 import Section from "../common/Section.astro";
 import Hero from "../widgets/Hero.astro";
 import Experience from "../widgets/Experience.astro";
+import Bento from "../widgets/Bento.astro";
 
 const experienceSection = await getEntry("sections", "experience");
 const projectsSection = await getEntry("sections", "projects");

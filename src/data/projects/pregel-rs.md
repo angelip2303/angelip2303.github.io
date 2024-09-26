@@ -1,6 +1,6 @@
 ---
 name: pregel-rs
-featured: Featured Project
+featured: true
 description: A Graph library written in Rust for implementing your own algorithms in a Pregel fashion.
 image: /src/assets/pregel.webp
 technologies:

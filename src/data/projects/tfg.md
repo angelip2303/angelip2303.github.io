@@ -1,6 +1,6 @@
 ---
 name: TFG
-featured: Featured Project
+featured: true
 description: Documentation of the Final Degree Project on the analysis and implementation of an algorithm to validate Knowledge Graphs using Big data techniques.
 image: /src/assets/tfg.webp
 technologies:

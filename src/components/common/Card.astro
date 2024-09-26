@@ -1,13 +1,12 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import type { CollectionEntry } from "astro:content";
 
 import Tag from "./Tag.astro";
 import Bullets from "./Bullets.astro";
 
 interface Props {
-  listItem: CollectionEntry<"talks" | "projects">;
+  listItem: any;
 }
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -28,10 +27,11 @@ export const prerender = true;
     overflow-hidden
     border border-slate-100 dark:border-slate-800
     group
+    col-span-1
+    ${featured ? "md:col-span-2 lg:col-span-2" : ""}
   `}
   href={url}
 >
-  <!-- <div class=""></div> --> TODO
   <Image
     src={images[image]()}
     alt={description}
@@ -41,7 +41,6 @@ export const prerender = true;
     duration-1000 ease-in-out group-hover:scale-110
   `}
   />
-
   <div
     class={`
       absolute
@@ -53,7 +52,7 @@ export const prerender = true;
       bg-slate-200 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-90
     `}
   >
-    <Tag text={featured} />
+    <Tag text={featured ? "Featured" : "Happy Accident"} />
     <h2 class="text-3xl">{name}</h2>
     <p class="text-lg">{description}</p>
     <Bullets bullets={technologies} />

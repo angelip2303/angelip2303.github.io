@@ -19,7 +19,7 @@ export const experienceSchema = z.object({
 
 export const listItemSchema = z.object({
   name: z.string(),
-  featured: z.string(),
+  featured: z.boolean(),
   description: z.string(),
   image: z.string(),
   technologies: z.array(z.string()),

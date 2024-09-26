@@ -1,6 +1,6 @@
 ---
 name: pschema-rs
-featured: Featured Project
+featured: true
 description: Pregel-based schema validation algorithm written in Rust for generating Wikidata subsets.
 image: /src/assets/pschema.webp
 technologies:

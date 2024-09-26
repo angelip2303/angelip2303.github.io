@@ -5,10 +5,12 @@ const { list } = Astro.props;
 ---
 
 <section
-  class={`
-    grid lg:grid-cols-10 auto-rows-[30rem]
-    gap-4
-`}
+  class=`
+  grid
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 
+  gap-4
+  grid-flow-dense
+`
 >
   {list.map((listItem) => <Card listItem={listItem} />)}
 </section>

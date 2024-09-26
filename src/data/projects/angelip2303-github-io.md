@@ -1,6 +1,6 @@
 ---
 name: angelip2303.github.io
-featured: Featured Project
+featured: true
 description: My personal portfolio website created using Astro and TailwindCSS.
 image: /src/assets/site.webp
 technologies:

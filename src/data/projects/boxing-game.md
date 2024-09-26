@@ -1,6 +1,6 @@
 ---
 name: Boxing Game
-featured: Featured Project
+featured: false
 description: Boxing game that can be controlled with your webcam. Created using ml5.js and p5.js.
 image: /src/assets/boxing.webp
 technologies:

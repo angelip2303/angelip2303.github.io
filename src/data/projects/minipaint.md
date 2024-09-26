@@ -1,6 +1,6 @@
 ---
 name: MiniPaint
-featured: Happy Accident
+featured: false
 description: Tiny whiteboard where user can draw and save what he is being painted in the canvas.
 image: /src/assets/minipaint.webp
 technologies:

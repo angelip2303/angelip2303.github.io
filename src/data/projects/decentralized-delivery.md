@@ -1,6 +1,6 @@
 ---
 name: Decentralized Delivery
-featured: Featured Project
+featured: true
 description: We are creating an app for you to order the products you want - as in any other site - with privacy in mind.
 image: /src/assets/dede.webp
 technologies:

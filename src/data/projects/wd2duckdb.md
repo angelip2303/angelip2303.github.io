@@ -1,6 +1,6 @@
 ---
 name: wd2duckdb
-featured: Happy Accident
+featured: false
 description: Application that transforms a Wikidata JSON dump into a DuckDB database.
 image: /src/assets/wd2duckdb.webp
 technologies:

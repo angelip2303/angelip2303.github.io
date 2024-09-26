@@ -1,6 +1,6 @@
 ---
 name: C--
-featured: Featured Project
+featured: true
 description: My own version of the C-- programming language. A simpler version of C written in the labs of the DLP course at UNIOVI.
 image: /src/assets/dlp.webp
 technologies:
