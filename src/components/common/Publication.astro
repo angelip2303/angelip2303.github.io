@@ -1,0 +1,25 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  publication: CollectionEntry<"publications">;
+}
+
+const { publication } = Astro.props;
+const { data } = publication;
+const { title, authors, date, doi, book, conference, featured, path } = data;
+
+export const prerender = true;
+---
+
+<li>
+  <p>
+    {title},
+    {authors.map((author) => `${author}, `)}
+    In <span>{book}</span>,
+    {conference},
+    {date}
+  </p>
+  <a href={doi}>DOI</a>
+  <a href={path}>PDF</a>
+</li>

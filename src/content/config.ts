@@ -5,6 +5,7 @@ import {
   experienceSchema,
   listItemSchema,
   menuSchema,
+  publicationSchema,
   sectionSchema,
   socialItemSchema,
 } from "../schemas";
@@ -31,7 +32,7 @@ const projects = defineCollection({
 
 const publications = defineCollection({
   loader: glob({ pattern: "*.md", base: "src/data/publications" }),
-  schema: listItemSchema,
+  schema: publicationSchema,
 });
 
 const talks = defineCollection({

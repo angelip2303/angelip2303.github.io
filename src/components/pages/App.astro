@@ -6,6 +6,7 @@ import Section from "../common/Section.astro";
 import Hero from "../widgets/Hero.astro";
 import Experience from "../widgets/Experience.astro";
 import Bento from "../widgets/Bento.astro";
+import Research from "../widgets/Research.astro";
 
 const experienceSection = await getEntry("sections", "experience");
 const projectsSection = await getEntry("sections", "projects");
@@ -27,7 +28,7 @@ const talks = await getCollection("talks");
       <Bento list={projects} />
     </Section>
     <Section section={publicationsSection}>
-      <Bento list={publications} />
+      <Research publications={publications} />
     </Section>
     <Section section={talksSection}>
       <Bento list={talks} />

@@ -26,6 +26,17 @@ export const listItemSchema = z.object({
   url: z.string().url(),
 });
 
+export const publicationSchema = z.object({
+  title: z.string(),
+  authors: z.array(z.string()),
+  date: z.string(),
+  book: z.string(),
+  conference: z.string(),
+  featured: z.boolean(),
+  path: z.string(),
+  doi: z.string().url(),
+});
+
 export const socialItemSchema = z.object({
   icon: z.string(),
   url: z.string().url(),

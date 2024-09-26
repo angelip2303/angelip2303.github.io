@@ -1,0 +1,9 @@
+---
+import Publication from "../common/Publication.astro";
+
+const { publications } = Astro.props;
+---
+
+<ul class="flex flex-col justify-center">
+  {publications.map((publication) => <Publication publication={publication} />)}
+</ul>
