@@ -4,6 +4,6 @@ import Publication from "../common/Publication.astro";
 const { publications } = Astro.props;
 ---
 
-<ul class="flex flex-col justify-center">
+<ul class="grid list-none grid-cols-1 gap-5">
   {publications.map((publication) => <Publication publication={publication} />)}
 </ul>

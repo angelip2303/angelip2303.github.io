@@ -1,0 +1,16 @@
+---
+import { Icon } from "astro-icon/components";
+
+import SecondaryButton from "./SecondaryButton.astro";
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<SecondaryButton href={href}>
+  <Icon name="ph:download-simple" class="text-xl" />
+  <span>Download</span>
+</SecondaryButton>

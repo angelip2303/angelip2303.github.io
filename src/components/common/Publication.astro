@@ -1,5 +1,10 @@
 ---
+import { Icon } from "astro-icon/components";
+
 import type { CollectionEntry } from "astro:content";
+
+import DownloadButton from "./DownloadButton.astro";
+import SecondaryButton from "./SecondaryButton.astro";
 
 interface Props {
   publication: CollectionEntry<"publications">;
@@ -12,14 +17,24 @@ const { title, authors, date, doi, book, conference, featured, path } = data;
 export const prerender = true;
 ---
 
-<li>
-  <p>
-    {title},
-    {authors.map((author) => `${author}, `)}
-    In <span>{book}</span>,
-    {conference},
-    {date}
+<li class="inline-flex gap-3">
+  <p class="mt-1 text-xl">
+    <Icon name="ph:file-text" />
   </p>
-  <a href={doi}>DOI</a>
-  <a href={path}>PDF</a>
+  <div class="flex flex-col gap-3">
+    <p class="text-xl">
+      "{title}",
+      {authors.map((author) => `${author}, `)}
+      <span class="text-slate-600 dark:text-slate-400">
+        In <span class="italic">{book}</span>,
+        {conference},
+        {date}
+      </span>
+      .
+    </p>
+    <div class="inline-flex items-center gap-2">
+      <SecondaryButton href={doi}>DOI</SecondaryButton>
+      <DownloadButton href={path} />
+    </div>
+  </div>
 </li>
