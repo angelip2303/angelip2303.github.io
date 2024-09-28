@@ -1,10 +1,18 @@
 ---
 import { Icon } from "astro-icon/components";
+
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 import { render, type CollectionEntry } from "astro:content";
 
 export interface Props {
   experience: CollectionEntry<"experience">;
 }
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
 
 const { experience } = Astro.props;
 const { data } = experience;
@@ -16,7 +24,11 @@ export const prerender = true;
 ---
 
 <li class="accordion flex gap-4">
-  <img src={logo} class="dark:bg-foreground size-12 rounded-full border" />
+  <Image
+    src={images[logo]()}
+    alt={job}
+    class="object-contain dark:bg-foreground size-12 rounded-full border"
+  />
   <div
     class={`
     accordion-button
