@@ -2,6 +2,8 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
+import { render } from "astro:content";
+
 import Tag from "./Tag.astro";
 import Bullets from "./Bullets.astro";
 
@@ -15,7 +17,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const { listItem } = Astro.props;
 const { data } = listItem;
-const { name, featured, description, image, technologies, url } = data;
+const { name, featured, image, technologies, url } = data;
+
+const { Content } = await render(listItem);
 
 export const prerender = true;
 ---
@@ -34,7 +38,7 @@ export const prerender = true;
 >
   <Image
     src={images[image]()}
-    alt={description}
+    alt={name}
     class={`
     h-full w-full object-cover
     transition-scale
@@ -54,7 +58,9 @@ export const prerender = true;
   >
     <Tag text={featured ? "Featured" : "Happy Accident"} />
     <h2 class="text-3xl">{name}</h2>
-    <p class="text-lg">{description}</p>
+    <p class="text-lg">
+      <Content />
+    </p>
     <Bullets bullets={technologies} />
   </div>
 </a>

@@ -1,7 +1,9 @@
 ---
+import { Icon } from "astro-icon/components";
+
 import type { CollectionEntry } from "astro:content";
 
-import { Icon } from "astro-icon/components";
+import PrimaryButton from "./PrimaryButton.astro";
 
 export interface Props {
   menuItem: CollectionEntry<"menu">;
@@ -14,7 +16,7 @@ const { id, icon, url } = data;
 export const prerender = true;
 ---
 
-<a href={url} class="btn nav-link font-medium">
+<PrimaryButton href={url} style="nav-link">
   <Icon name={icon} class="h-7 w-7" />
   {id}
-</a>
+</PrimaryButton>

@@ -6,6 +6,6 @@ import Timeline from "../common/Timeline.astro";
 const experience = await getCollection("experience");
 ---
 
-<ol class="flex flex-col justify-center">
+<ol class="flex w-full flex-col gap-5">
   {experience.map((experience) => <Timeline experience={experience} />)}
 </ol>

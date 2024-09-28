@@ -12,9 +12,13 @@ export const sectionSchema = z.object({
 });
 
 export const experienceSchema = z.object({
-  title: z.string(),
-  date: z.string(),
-  description: z.string(),
+  company: z.string(),
+  job: z.string(),
+  startMonth: z.string(),
+  startYear: z.number(),
+  endMonth: z.string().optional(),
+  endYear: z.number().optional(),
+  logo: z.string(),
 });
 
 export const listItemSchema = z.object({

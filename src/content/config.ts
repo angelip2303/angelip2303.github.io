@@ -21,7 +21,7 @@ const sections = defineCollection({
 });
 
 const experience = defineCollection({
-  loader: glob({ pattern: "*.json", base: "src/data/experience" }),
+  loader: glob({ pattern: "*.md", base: "src/data/experience" }),
   schema: experienceSchema,
 });
 
