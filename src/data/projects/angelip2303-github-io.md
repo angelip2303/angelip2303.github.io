@@ -10,6 +10,4 @@ technologies:
 url: https://github.com/angelip2303/angelip2303.github.io
 ---
 
-# angelip2303.github.io
-
 My personal portfolio website created using Astro and TailwindCSS.

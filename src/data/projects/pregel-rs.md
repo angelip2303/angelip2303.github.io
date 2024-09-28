@@ -12,6 +12,4 @@ technologies:
 url: https://github.com/angelip2303/pregel-rs
 ---
 
-# pregel-rs
-
 A Graph library written in Rust for implementing your own algorithms in a Pregel fashion.

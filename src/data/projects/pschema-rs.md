@@ -13,6 +13,4 @@ technologies:
 url: https://github.com/angelip2303/pschema-rs
 ---
 
-# pschema-rs
-
 Pregel-based schema validation algorithm written in Rust for generating Wikidata subsets.

@@ -24,9 +24,10 @@ const { Content } = await render(listItem);
 export const prerender = true;
 ---
 
-<a
+<li
   class={`
     relative
+    flex flex-col
     rounded-xl
     overflow-hidden
     border border-slate-100 dark:border-slate-800
@@ -34,33 +35,20 @@ export const prerender = true;
     col-span-1
     ${featured ? "md:col-span-2 lg:col-span-2" : ""}
   `}
-  href={url}
 >
-  <Image
-    src={images[image]()}
-    alt={name}
-    class={`
-      h-full w-full object-cover
-      transition-scale
-      duration-1000 ease-in-out group-hover:scale-110
-    `}
-  />
-  <div
-    class={`
-      absolute
-      top-0
-      flex flex-col items-center justify-center gap-4
-      h-full w-full
-      px-5 py-20
-      text-center
-      bg-slate-200 bg-opacity-90 dark:bg-slate-800 dark:bg-opacity-90
-    `}
-  >
-    <Tag text={featured ? "Featured" : "Happy Accident"} />
+  <Tag text={featured ? "Featured" : "Happy Accident"} class="absolute" />
+  <a href={url} class="h-2/5">
+    <Image
+      src={images[image]()}
+      alt={name}
+      class="h-full w-full object-cover"
+    />
+  </a>
+  <div class="m-0 flex flex-col gap-3 p-2">
     <h2 class="text-3xl">{name}</h2>
-    <p class="text-lg">
+    <p class="prose text-lg">
       <Content />
     </p>
     <Bullets bullets={technologies} />
   </div>
-</a>
+</li>

@@ -13,6 +13,4 @@ technologies:
 url: https://github.com/angelip2303/wd2duckdb
 ---
 
-# wd2duckdb
-
 Application that transforms a Wikidata JSON dump into a DuckDB database.

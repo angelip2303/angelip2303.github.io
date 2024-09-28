@@ -9,6 +9,4 @@ technologies:
 url: https://github.com/Arquisoft/dede_en2a
 ---
 
-# Decentralized Delivery
-
 We are creating an app for you to order the products you want - as in any other site - with privacy in mind.

@@ -11,6 +11,4 @@ technologies:
 url: https://angelip2303.github.io/boxing-docs/
 ---
 
-# Boxing Game
-
 Boxing game that can be controlled with your webcam. Created using ml5.js and p5.js.
