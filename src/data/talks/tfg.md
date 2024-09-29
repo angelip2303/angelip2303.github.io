@@ -1,16 +1,7 @@
 ---
-name: TFG
-featured: true
-description: Documentation of the Final Degree Project on the analysis and implementation of an algorithm to validate Knowledge Graphs using Big data techniques.
-image: /src/assets/tfg.webp
-technologies:
-  - Documentation
-  - Latex
-  - RDF
-  - Research
-url: https://angelip2303.github.io/tfg/
+event: Knowledge Graph and Semantic Web Conference
+title: Creating Knowledge Graph subsets using Pregel
+date: Oct 22, 2023
+location: Zaragoza, Spain
+slides: https://angelip2303.github.io/kgswc2023-31/
 ---
-
-# TFG
-
-Documentation of the Final Degree Project on the analysis and implementation of an algorithm to validate Knowledge Graphs using Big data techniques.

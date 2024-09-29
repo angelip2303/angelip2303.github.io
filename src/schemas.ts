@@ -41,6 +41,15 @@ export const publicationSchema = z.object({
   doi: z.string().url(),
 });
 
+export const talkSchema = z.object({
+  event: z.string(),
+  title: z.string(),
+  date: z.string(),
+  location: z.string(),
+  url: z.string().url().optional(),
+  slides: z.string().optional(),
+});
+
 export const socialItemSchema = z.object({
   icon: z.string(),
   url: z.string().url(),

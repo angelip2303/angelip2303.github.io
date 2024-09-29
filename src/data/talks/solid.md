@@ -1,10 +1,7 @@
 ---
-name: Solid World July 2022
-featured: true
-description: Event where I introduced the Decentralized Delivery project to the Solid community.
-image: /src/assets/solid.webp
-technologies:
-  - English
-  - Communication
+event: Solid World July 2022
+title: Decentralized Delivery, a SOLID use-case
+date: July 22, 2022
+location: Online
 url: https://vimeo.com/731471028
 ---

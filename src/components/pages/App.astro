@@ -7,6 +7,7 @@ import Hero from "../widgets/Hero.astro";
 import Experience from "../widgets/Experience.astro";
 import Bento from "../widgets/Bento.astro";
 import Research from "../widgets/Research.astro";
+import Talks from "../widgets/Talks.astro";
 
 const experienceSection = await getEntry("sections", "experience");
 const projectsSection = await getEntry("sections", "projects");
@@ -19,7 +20,7 @@ const talks = await getCollection("talks");
 ---
 
 <Layout>
-  <main class="mx-auto flex w-4/5 flex-col gap-y-16">
+  <main class="mx-auto flex w-9/12 flex-col gap-y-16 lg:w-7/12">
     <Hero />
     <Section section={experienceSection}>
       <Experience />
@@ -31,7 +32,7 @@ const talks = await getCollection("talks");
       <Research publications={publications} />
     </Section>
     <Section section={talksSection}>
-      <Bento list={talks} />
+      <Talks talks={talks} />
     </Section>
   </main>
 </Layout>

@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+
+import { render, type CollectionEntry } from "astro:content";
+
+import SecondaryButton from "./SecondaryButton.astro";
+
+export interface Props {
+  talk: CollectionEntry<"talk">;
+}
+
+const { talk } = Astro.props;
+const { data } = talk;
+const { event, title, date, location, url, slides } = data;
+
+export const prerender = true;
+---
+
+<li class="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+  <div class="">
+    <h3 class="text-xl">{event}</h3>
+    <h4>{title}</h4>
+    <p class="text-lg text-slate-600 dark:text-slate-400">
+      {date} · {location}
+    </p>
+  </div>
+  <div>
+    {
+      url && (
+        <SecondaryButton href={url}>
+          <Icon name="ph:link" class="text-xl" />
+          <span>URL</span>
+        </SecondaryButton>
+      )
+    }
+    {
+      slides && (
+        <SecondaryButton href={slides}>
+          <Icon name="ph:presentation" class="text-xl" />
+          <span>Slides</span>
+        </SecondaryButton>
+      )
+    }
+  </div>
+</li>

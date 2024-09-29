@@ -1,4 +1,6 @@
 ---
+import Bullet from "./Bullet.astro";
+
 export interface BulletsProps {
   bullets: string[];
 }
@@ -6,14 +8,6 @@ export interface BulletsProps {
 const { bullets } = Astro.props;
 ---
 
-<div class="flex flex-row items-center justify-center gap-1">
-  <p>{bullets[0]}</p>
-  {
-    bullets.slice(1).map((technology: string) => (
-      <>
-        <span>·</span>
-        <p>{technology}</p>
-      </>
-    ))
-  }
+<div class="flex flex-row flex-wrap items-center gap-1">
+  {bullets.map((technology: string) => <Bullet technology={technology} />)}
 </div>

@@ -38,7 +38,7 @@ export const prerender = true;
   `}
   >
     <div class="flex items-center justify-between">
-      <h3 class="inline-flex items-center font-semibold">
+      <h3 class="inline-flex items-center text-xl">
         {company}
         <Icon
           name="ph:caret-right"
@@ -52,7 +52,7 @@ export const prerender = true;
           `}
         />
       </h3>
-      <p>
+      <p class="text-lg">
         {
           `
           ${startMonth.substring(0, 3)} ${startYear}
@@ -62,7 +62,7 @@ export const prerender = true;
         }
       </p>
     </div>
-    <p>{job}</p>
+    <p class="text-lg">{job}</p>
     <div class="accordion-content hidden">
       <Content />
     </div>

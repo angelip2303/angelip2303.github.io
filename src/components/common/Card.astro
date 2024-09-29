@@ -31,24 +31,20 @@ export const prerender = true;
     rounded-xl
     overflow-hidden
     border border-slate-100 dark:border-slate-800
-    group
     col-span-1
-    ${featured ? "md:col-span-2 lg:col-span-2" : ""}
   `}
 >
-  <Tag text={featured ? "Featured" : "Happy Accident"} class="absolute" />
   <a href={url} class="h-2/5">
     <Image
       src={images[image]()}
       alt={name}
-      class="h-full w-full object-cover"
+      class="h-full w-full object-cover opacity-60"
     />
   </a>
+  <Tag text={featured ? "Featured" : "Happy Accident"} class="absolute" />
   <div class="m-0 flex flex-col gap-3 p-2">
     <h2 class="text-3xl">{name}</h2>
-    <p class="prose text-lg">
-      <Content />
-    </p>
+    <Content />
     <Bullets bullets={technologies} />
   </div>
 </li>

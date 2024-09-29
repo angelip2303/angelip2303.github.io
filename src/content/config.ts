@@ -8,6 +8,7 @@ import {
   publicationSchema,
   sectionSchema,
   socialItemSchema,
+  talkSchema,
 } from "../schemas";
 
 const menu = defineCollection({
@@ -37,7 +38,7 @@ const publications = defineCollection({
 
 const talks = defineCollection({
   loader: glob({ pattern: "*.md", base: "src/data/talks" }),
-  schema: listItemSchema,
+  schema: talkSchema,
 });
 
 const socials = defineCollection({

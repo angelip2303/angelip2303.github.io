@@ -1,0 +1,9 @@
+---
+import Talk from "../common/Talk.astro";
+
+const { talks } = Astro.props;
+---
+
+<ul class="grid w-full grid-cols-1 gap-5">
+  {talks.map((talk) => <Talk talk={talk} />)}
+</ul>

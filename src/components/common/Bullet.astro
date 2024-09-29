@@ -1,0 +1,18 @@
+---
+interface Props {
+  technology: string;
+}
+
+const { technology } = Astro.props;
+---
+
+<p
+  class={`
+      p-1
+      rounded
+      text-current
+      bg-slate-200 dark:bg-slate-800
+    `}
+>
+  {technology}
+</p>
